@@ -129,4 +129,14 @@ public class RandomValue {
     public static String getTagContent() {
         return TagGenerator.getInstance().generate();
     }
+    public static String getMessageContent(String id)
+    {
+        return "你好，我是"+id+"贵司还招人吗";
+    }
+
+    public static String getCommentContent()
+    {
+        return CommentList.commentList.get(RandomUtils.nextInt(0, CommentList.commentList.size()-1));
+    }
+
 }

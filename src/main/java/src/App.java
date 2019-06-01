@@ -11,6 +11,7 @@ import java.util.Set;
 import java.util.HashSet;
 
 import java.util.Collection;
+
 public class App {
     private String url = "jdbc:mysql://localhost:3306/hireapp?useServerPrepStmts=false&rewriteBatchedStatements=true&useUnicode=true&amp&serverTimezone=GMT";
     private String user = "root";
@@ -20,7 +21,7 @@ public class App {
 
 
     @org.junit.Test
-    public void insertApplicant() {
+    public void insertApplicantAndBanApplicant() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
         //定义需要的身份证号
@@ -30,6 +31,8 @@ public class App {
         //定义连接、statement对象
         Connection conn = null;
         PreparedStatement pstm = null;
+
+        PreparedStatement pstm2 = null;
         try {
             //加载jdbc驱动
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -39,8 +42,11 @@ public class App {
             // conn.setAutoCommit(false);
             //编写sql
             String sql = "INSERT INTO  ApplicantUser VALUES (?,?,?)";
+
+            String sql2 = "INSERT INTO  bansuser VALUES (?,?,?)";
             //预编译sql
             pstm = conn.prepareStatement(sql);
+            pstm2 = conn.prepareStatement(sql2);
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
@@ -59,11 +65,19 @@ public class App {
                     pstm.setString(3, RandomValue.getPassword(6, 10));
                     //添加到同一个批处理中
                     pstm.addBatch();
+
+                    pstm2.setInt(1, RandomUtils.nextInt(1, 5000));
+                    pstm2.setString(2, id.toString(10));
+                    pstm2.setBoolean(1, RandomUtils.nextInt(0, 10) % 4 == 1);
+
+                    pstm2.addBatch();
+
                     begin++;
                     id = id.add(one);
                 }
                 //执行批处理
                 pstm.executeBatch();
+                pstm2.executeBatch();
 //                //提交事务
 //                conn.commit();
                 //边界值自增10W
@@ -71,12 +85,12 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入1k条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入1k条数据耗时：" + "成功插入1k条数据耗时："+(eTime - bTime));
             }
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入1w数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入1w数据共耗时：" + "插入1w数据共耗时：" +(eTime1 - bTime1));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e1) {
@@ -148,12 +162,14 @@ public class App {
 
 
     @org.junit.Test
-    public void insertcorp() {
+    public void insertcorpAndBanCorp() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
         //定义连接、statement对象
         Connection conn = null;
         PreparedStatement pstm = null;
+
+        PreparedStatement pstm2 = null;
         int corp_id = 1;
         try {
             //加载jdbc驱动
@@ -164,8 +180,12 @@ public class App {
             // conn.setAutoCommit(false);
             //编写sql
             String sql = "INSERT INTO corp VALUES (?,?,?,?,?)";
+
+            String sql2 = "INSERT INTO banscorp VALUES (?,?,?)";
             //预编译sql
-            pstm = conn.prepareStatement(sql);
+            pstm = conn.prepareStatement(sql);//insert corp
+
+            pstm2 = conn.prepareStatement(sql2);//ban corp
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
@@ -186,11 +206,17 @@ public class App {
                     pstm.setString(5, RandomValue.getPassword(6, 10));
                     //添加到同一个批处理中
                     pstm.addBatch();
+                    pstm2.setInt(1, RandomUtils.nextInt(1, 5000));
+                    pstm2.setInt(2, corp_id);
+                    pstm2.setBoolean(3, RandomUtils.nextInt(1, 10) % 4 == 1);
+
+                    pstm2.addBatch();
                     begin++;
                     corp_id++;
                 }
                 //执行批处理
                 pstm.executeBatch();
+                pstm2.executeBatch();
 //                //提交事务
 //                conn.commit();
                 //边界值自增
@@ -198,12 +224,12 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入1k条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入1k条数据耗时：" + "成功插入1k条数据耗时：" + (eTime - bTime));
             }
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入1w数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入1w数据共耗时：" + "插入1w数据共耗时：" + (eTime1 - bTime1));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e1) {
@@ -290,7 +316,6 @@ public class App {
 
     @org.junit.Test
     public void insertApplicantTags() {
-        insertApplicant();
         BigInteger id = new BigInteger("310103199210102000");
         BigInteger one = new BigInteger("1");
         long begin = 1;
@@ -359,7 +384,7 @@ public class App {
 
     @org.junit.Test
     public void insertJobTags() {
-        insertcorp();
+        insertcorpAndBanCorp();
         insertJobs();
 
         long begin = 1;
@@ -438,12 +463,9 @@ public class App {
     }
 
 
-
     @org.junit.Test
     public void insertapply() {
-        insertcorp();
         insertJobs();
-        insertApplicant();
 
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
@@ -481,11 +503,11 @@ public class App {
                     //开启分段计时，计1W数据耗时
                     for (int k = 0; k < corp_job_num.get(corp_id); k++) {
                         int job_id = k + 1;
-                        int apply_num= RandomUtils.nextInt(0, 5);
-                        sum+=apply_num;
+                        int apply_num = RandomUtils.nextInt(0, 5);
+                        sum += apply_num;
                         for (int j = 0; j < apply_num; j++) {
-                            applicant_id=new BigInteger("310103199210102000");
-                            applicant_id=applicant_id.add(new BigInteger(RandomUtils.nextInt((j+1)*1000, (j+1)*1000*2-1) +""));
+                            applicant_id = new BigInteger("310103199210102000");
+                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt((j + 1) * 1000, (j + 1) * 1000 * 2 - 1) + ""));
                             //随机applicant
                             pstm.setString(1, applicant_id.toString());
                             pstm.setInt(2, corp_id);
@@ -523,8 +545,6 @@ public class App {
         }
     }
 
-
-
     @org.junit.Test
     public void insert_applicant_to_corp() {
 
@@ -559,14 +579,14 @@ public class App {
 
                 long bTime = System.currentTimeMillis();
                 while (begin < end) {
-                    int num= RandomUtils.nextInt(0, 15);
-                    sum+=num;
-                    for(int j=0;j<num;j++) {
-                        applicant_id=new BigInteger("310103199210102000");
-                        applicant_id=applicant_id.add(new BigInteger(RandomUtils.nextInt((j+1)*1000, (j+1)*1000*2-1) +""));
+                    int num = RandomUtils.nextInt(0, 15);
+                    sum += num;
+                    for (int j = 0; j < num; j++) {
+                        applicant_id = new BigInteger("310103199210102000");
+                        applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt((j + 1) * 1000, (j + 1) * 1000 * 2 - 1) + ""));
                         pstm.setString(1, applicant_id.toString());
 
-                        System.out.println(applicant_id.toString());
+                        //  System.out.println(applicant_id.toString());
                         pstm.setInt(2, corp_id);
                         pstm.setBoolean(3, j % 2 == 1);
                         pstm.setBoolean(4, j % 2 == 0);
@@ -598,4 +618,180 @@ public class App {
             e1.printStackTrace();
         }
     }
+
+
+    @org.junit.Test
+    public void insert_message() {
+
+        long begin = 1;
+        long end = begin + 1000;///每次循环插入的数据量
+        long sum = 0;
+
+        BigInteger applicant_id = new BigInteger("310103199210102000");
+
+        //定义连接、statement对象
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        int corp_id = 1;
+
+        try {
+            //加载jdbc驱动
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //连接mysql
+            conn = DriverManager.getConnection(url, user, password);
+            //将自动提交关闭
+            // conn.setAutoCommit(false);
+            //编写sql
+            String sql = "INSERT INTO messagetocorp VALUES (?,?,?,?,?)";
+            //预编译sql
+            pstm = conn.prepareStatement(sql);
+            //开始总计时
+            long bTime1 = System.currentTimeMillis();
+
+            //循环10次，每次1000数据，一共1万
+            for (int i = 0; i < 10; i++) {
+                //开始循环
+
+                long bTime = System.currentTimeMillis();
+                while (begin < end) {
+                    int num = RandomUtils.nextInt(0, 5);
+                    sum += num;
+                    int message_id = 1;
+                    for (int j = 0; j < num; j++) {
+                        applicant_id = new BigInteger("310103199210102000");
+                        applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 10000) + ""));
+                        pstm.setString(1, applicant_id.toString());
+                        //  System.out.println(applicant_id.toString());
+                        pstm.setInt(2, corp_id);
+                        pstm.setInt(3, message_id);
+                        message_id++;
+                        pstm.setString(4, RandomValue.getMessageContent(applicant_id.toString()));
+                        pstm.setBoolean(5, true);
+                        pstm.addBatch();
+                    }
+                    corp_id++;
+                    begin++;
+                }
+                end += 1000;
+                //关闭分段计时
+
+                pstm.executeBatch();
+                long eTime = System.currentTimeMillis();
+                //输出
+                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+            }
+//                //提交事务
+//                conn.commit();
+            //边界值自增10W
+            //关闭总计时
+            long eTime1 = System.currentTimeMillis();
+            //输出
+            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+        } catch (
+                SQLException e) {
+            e.printStackTrace();
+        } catch (
+                ClassNotFoundException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+    @org.junit.Test
+    public void insertcommentAndBanComment() {
+        insertadmin();
+        insertcorpAndBanCorp();
+        insertJobs();
+
+        long begin = 1;
+        long end = begin + 1000;///每次循环插入的数据量
+        long sum = 0;
+
+        BigInteger applicant_id = new BigInteger("310103199210102000");
+        BigInteger one = new BigInteger("1");
+
+
+        //定义连接、statement对象
+        Connection conn = null;
+        PreparedStatement pstm = null;//insert comment
+        PreparedStatement pstm2 = null;//ban comment
+        int corp_id = 1;
+
+        try {
+            //加载jdbc驱动
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //连接mysql
+            conn = DriverManager.getConnection(url, user, password);
+            //将自动提交关闭
+            // conn.setAutoCommit(false);
+            //编写sql
+            String sql = "INSERT INTO comments VALUES (?,?,?,?,?)";
+
+            String sql2 = "INSERT INTO banscomment VALUES (?,?,?,?,?,?)";
+            //预编译sql
+            pstm = conn.prepareStatement(sql);
+            pstm2 = conn.prepareStatement(sql2);
+            //开始总计时
+            long bTime1 = System.currentTimeMillis();
+
+            //循环10次，每次1000数据，一共1万
+            for (int i = 0; i < 10; i++) {
+                int comment_id = 1;
+                //开始循环
+
+                long bTime = System.currentTimeMillis();
+                while (begin < end) {
+                    //开启分段计时，计1W数据耗时
+                    for (int k = 0; k < corp_job_num.get(corp_id); k++) {
+                        int job_id = k + 1;
+                        int apply_num = RandomUtils.nextInt(0, 5);
+                        sum += apply_num;
+                        for (int j = 0; j < apply_num; j++) {
+                            applicant_id = new BigInteger("310103199210102000");
+                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt((j + 1) * 1000, (j + 1) * 1000 * 2 - 1) + ""));
+                            //随机applicant
+                            pstm.setString(1, applicant_id.toString());
+                            pstm.setInt(2, corp_id);
+                            pstm.setInt(3, job_id);
+                            pstm.setInt(4, comment_id);
+                            pstm.setString(5, RandomValue.getCommentContent());
+
+                            pstm.addBatch();
+
+                            pstm2.setInt(1, RandomUtils.nextInt(1, 5000));//admin number = 5000
+                            pstm2.setString(2, applicant_id.toString());
+                            pstm2.setInt(3, corp_id);
+                            pstm2.setInt(4, job_id);
+                            pstm2.setInt(5, comment_id);
+                            pstm2.setBoolean(6, j % 4 == 1);
+
+                            pstm2.addBatch();
+
+                            comment_id++;
+                        }
+                        begin++;
+                        //添加到同一个批处理中
+                    }
+                    corp_id++;
+                }
+                end += 1000;
+                pstm.executeBatch();
+                pstm2.executeBatch();
+                //关闭分段计时
+                long eTime = System.currentTimeMillis();
+                //输出
+                System.out.println("成功插入" + sum + "条comment数据" + "成功插入" + sum + "条ban comment数据" + "耗时：" + (eTime - bTime));
+            }
+            long eTime1 = System.currentTimeMillis();
+            //输出
+            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+        } catch (
+                SQLException e) {
+            e.printStackTrace();
+        } catch (
+                ClassNotFoundException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+
 }
