@@ -5,13 +5,14 @@ import org.apache.commons.lang3.RandomUtils;
 
 import java.util.HashMap;
 import java.util.Map;
-public class JobGenerator  extends GenericGenerator {
+
+public class JobGenerator extends GenericGenerator {
 
 
-    private static JobGenerator   instance = new JobGenerator  ();
+    private static JobGenerator instance = new JobGenerator();
 
 
-    private JobGenerator  () {
+    private JobGenerator() {
     }
 
     public static GenericGenerator getInstance() {
@@ -25,11 +26,11 @@ public class JobGenerator  extends GenericGenerator {
 
 
     public static String genName() {
-        String str = "";
-        return str;
+        int i = RandomUtils.nextInt(0, JobList.NameList.size());
+        return JobList.NameList.get(i);
     }
 
-    public static String  genDemand(String JobName){
-        return "";
+    public static String genDemand(String JobName) {
+        return JobName+"需要有"+RandomUtils.nextInt(1, 10)+"年经验。";
     }
 }

@@ -1,8 +1,14 @@
 package src.random;
 
-public class JobList {
+import javax.naming.Name;
+import java.util.ArrayList;
+import java.util.List;
 
-    String a="0102 行政总监\n" +
+public class JobList {
+    static String[] jobName;
+    public static List<String> NameList = new ArrayList();
+
+    static String text = "0102 行政总监\n" +
             "\n" +
             "0103 技术总监CTO/总工\n" +
             "\n" +
@@ -85,8 +91,6 @@ public class JobList {
             "\n" +
             "0435 成本分析/核算\n" +
             "\n" +
-            "05－－－－－行政/人力资源管理类－－－\n" +
-            "\n" +
             "0501 行政经理/主管\n" +
             "\n" +
             "0502 行政专员/行政秘书/助理\n" +
@@ -126,8 +130,6 @@ public class JobList {
             "0625 韩语翻译\n" +
             "\n" +
             "0626 其它语种\n" +
-            "\n" +
-            "07－－－－－客户服务类－－－－－\n" +
             "\n" +
             "0701 客户服务经理\n" +
             "\n" +
@@ -250,7 +252,7 @@ public class JobList {
             "\n" +
             "1105 结构工程师\n" +
             "\n" +
-            "1106 注塑/电镀工程师\n" +
+            "1106 注塑工程师/电镀工程师\n" +
             "\n" +
             "1111 机电技术员\n" +
             "\n" +
@@ -282,7 +284,7 @@ public class JobList {
             "\n" +
             "1233 港口与航道设计与施工\n" +
             "\n" +
-            "1234 水电/管道工程师\n" +
+            "1234 水电工程师/管道工程师\n" +
             "\n" +
             "1235 给排水工程师\n" +
             "\n" +
@@ -429,8 +431,6 @@ public class JobList {
             "\n" +
             "2022 家用电器维修\n" +
             "\n" +
-            "21―――咨询/顾问类―――\n" +
-            "\n" +
             "2101 企业管理咨询\n" +
             "\n" +
             "2102 企业管理顾问\n" +
@@ -504,9 +504,16 @@ public class JobList {
             "2512 摄影录制\n" +
             "\n" +
             "2521 节目主持/DJ/播音";
-    static
-    {
-        
-    }
 
+    static {
+        jobName = text.split("\n|/|\b|1|2|3|4|5|6|7|8|9|0| ");
+        for(int i = 0;i<jobName.length;i++)
+        {
+            if(jobName[i].length() > 2)
+            {
+            //    System.out.println(jobName[i]);
+                NameList.add(jobName[i]);
+            }
+        }
+    }
 }

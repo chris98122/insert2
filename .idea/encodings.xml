@@ -4,6 +4,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/src/App.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/src/random/CorpList.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/src/random/RandomValue.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/src/random/RandomValue.java" charset="UTF-8" />
   </component>
 </project>

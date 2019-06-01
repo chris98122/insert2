@@ -1119,153 +1119,184 @@
     </collation>
     <table id="281" parent="3" name="admin"/>
     <table id="282" parent="3" name="applicant_to_corp"/>
-    <table id="283" parent="3" name="applicantuser"/>
-    <table id="284" parent="3" name="applyforjob"/>
-    <table id="285" parent="3" name="banscomment"/>
-    <table id="286" parent="3" name="banscorp"/>
-    <table id="287" parent="3" name="bansuser"/>
-    <table id="288" parent="3" name="comments"/>
-    <table id="289" parent="3" name="corp"/>
-    <table id="290" parent="3" name="jobs"/>
-    <table id="291" parent="3" name="messagetocorp"/>
-    <table id="292" parent="3" name="tags"/>
-    <table id="293" parent="3" name="tip_or_like"/>
-    <table id="294" parent="3" name="tip_or_like_applicant"/>
-    <table id="295" parent="3" name="tip_or_like_comment"/>
-    <table id="296" parent="3" name="tip_or_like_job"/>
-    <column id="297" parent="281" name="adminID">
+    <table id="283" parent="3" name="applicanttag"/>
+    <table id="284" parent="3" name="applicantuser"/>
+    <table id="285" parent="3" name="applyforjob"/>
+    <table id="286" parent="3" name="banscomment"/>
+    <table id="287" parent="3" name="banscorp"/>
+    <table id="288" parent="3" name="bansuser"/>
+    <table id="289" parent="3" name="comments"/>
+    <table id="290" parent="3" name="corp"/>
+    <table id="291" parent="3" name="jobs"/>
+    <table id="292" parent="3" name="jobtag"/>
+    <table id="293" parent="3" name="messagetocorp"/>
+    <table id="294" parent="3" name="tip_or_like"/>
+    <table id="295" parent="3" name="tip_or_like_applicant"/>
+    <table id="296" parent="3" name="tip_or_like_comment"/>
+    <table id="297" parent="3" name="tip_or_like_job"/>
+    <column id="298" parent="281" name="adminID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="298" parent="281" name="admin_password">
+    <column id="299" parent="281" name="admin_password">
       <Position>2</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="299" parent="281" name="PRIMARY">
+    <key id="300" parent="281" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>adminID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="282" name="indentificationID">
+    <column id="301" parent="282" name="indentificationID">
       <Position>1</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="282" name="CorpID">
+    <column id="302" parent="282" name="CorpID">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="282" name="Follows">
+    <column id="303" parent="282" name="Follows">
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="303" parent="282" name="Bans">
+    <column id="304" parent="282" name="Bans">
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="304" parent="282" name="FK_Applicant_to_Corp2">
+    <index id="305" parent="282" name="FK_Applicant_to_Corp2">
       <ColNames>CorpID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="305" parent="282" name="PRIMARY">
+    <key id="306" parent="282" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>indentificationID
 CorpID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="306" parent="282" name="FK_Applicant_to_Corp">
+    <foreign-key id="307" parent="282" name="FK_Applicant_to_Corp">
       <ColNames>indentificationID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>applicantuser</RefTableName>
       <RefColNames>indentificationID</RefColNames>
     </foreign-key>
-    <foreign-key id="307" parent="282" name="FK_Applicant_to_Corp2">
+    <foreign-key id="308" parent="282" name="FK_Applicant_to_Corp2">
       <ColNames>CorpID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>corp</RefTableName>
       <RefColNames>CorpID</RefColNames>
     </foreign-key>
-    <column id="308" parent="283" name="username">
+    <column id="309" parent="283" name="indentificationID">
       <Position>1</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="283" name="indentificationID">
+    <column id="310" parent="283" name="Tag_ID">
       <Position>2</Position>
-      <DataType>varchar(256)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="283" name="applicant_password">
+    <column id="311" parent="283" name="Content">
       <Position>3</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="311" parent="283" name="PRIMARY">
+    <key id="312" parent="283" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>indentificationID
+Tag_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="313" parent="283" name="FK_have_tag">
+      <ColNames>indentificationID</ColNames>
+      <RefSchemaName>hireapp</RefSchemaName>
+      <RefTableName>applicantuser</RefTableName>
+      <RefColNames>indentificationID</RefColNames>
+    </foreign-key>
+    <column id="314" parent="284" name="username">
+      <Position>1</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="315" parent="284" name="indentificationID">
+      <Position>2</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="316" parent="284" name="applicant_password">
+      <Position>3</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="317" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>indentificationID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="312" parent="284" name="indentificationID">
+    <column id="318" parent="285" name="indentificationID">
       <Position>1</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="284" name="CorpID">
+    <column id="319" parent="285" name="CorpID">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="284" name="JobID">
+    <column id="320" parent="285" name="JobID">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="284" name="ApplyTime">
+    <column id="321" parent="285" name="ApplyTime">
       <Position>4</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="316" parent="284" name="FK_ApplyForJob">
+    <index id="322" parent="285" name="FK_ApplyForJob">
       <ColNames>indentificationID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="317" parent="284" name="FK_ApplyForJob2">
+    <index id="323" parent="285" name="FK_ApplyForJob2">
       <ColNames>CorpID
 JobID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="318" parent="284" name="PRIMARY">
+    <key id="324" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CorpID
 indentificationID
 JobID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="319" parent="284" name="FK_ApplyForJob">
+    <foreign-key id="325" parent="285" name="FK_ApplyForJob">
       <ColNames>indentificationID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>applicantuser</RefTableName>
       <RefColNames>indentificationID</RefColNames>
     </foreign-key>
-    <foreign-key id="320" parent="284" name="FK_ApplyForJob2">
+    <foreign-key id="326" parent="285" name="FK_ApplyForJob2">
       <ColNames>CorpID
 JobID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
@@ -1273,53 +1304,53 @@ JobID</ColNames>
       <RefColNames>CorpID
 JobID</RefColNames>
     </foreign-key>
-    <column id="321" parent="285" name="adminID">
+    <column id="327" parent="286" name="adminID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="322" parent="285" name="indentificationID">
+    <column id="328" parent="286" name="indentificationID">
       <Position>2</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="323" parent="285" name="CorpID">
+    <column id="329" parent="286" name="CorpID">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="324" parent="285" name="JobID">
+    <column id="330" parent="286" name="JobID">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="325" parent="285" name="CommentID">
+    <column id="331" parent="286" name="CommentID">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="326" parent="285" name="is_bannedComment">
+    <column id="332" parent="286" name="is_bannedComment">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="327" parent="285" name="FK_BansComment">
+    <index id="333" parent="286" name="FK_BansComment">
       <ColNames>adminID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="328" parent="285" name="FK_BansComment2">
+    <index id="334" parent="286" name="FK_BansComment2">
       <ColNames>indentificationID
 CorpID
 JobID
 CommentID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="329" parent="285" name="PRIMARY">
+    <key id="335" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>indentificationID
 CorpID
@@ -1328,13 +1359,13 @@ adminID
 CommentID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="330" parent="285" name="FK_BansComment">
+    <foreign-key id="336" parent="286" name="FK_BansComment">
       <ColNames>adminID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>admin</RefTableName>
       <RefColNames>adminID</RefColNames>
     </foreign-key>
-    <foreign-key id="331" parent="285" name="FK_BansComment2">
+    <foreign-key id="337" parent="286" name="FK_BansComment2">
       <ColNames>indentificationID
 CorpID
 JobID
@@ -1346,121 +1377,121 @@ CorpID
 JobID
 CommentID</RefColNames>
     </foreign-key>
-    <column id="332" parent="286" name="adminID">
+    <column id="338" parent="287" name="adminID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="333" parent="286" name="CorpID">
+    <column id="339" parent="287" name="CorpID">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="334" parent="286" name="is_bannedCorp">
+    <column id="340" parent="287" name="is_bannedCorp">
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="335" parent="286" name="FK_BansCorp2">
+    <index id="341" parent="287" name="FK_BansCorp2">
       <ColNames>CorpID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="336" parent="286" name="PRIMARY">
+    <key id="342" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>adminID
 CorpID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="337" parent="286" name="FK_BansCorp">
+    <foreign-key id="343" parent="287" name="FK_BansCorp">
       <ColNames>adminID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>admin</RefTableName>
       <RefColNames>adminID</RefColNames>
     </foreign-key>
-    <foreign-key id="338" parent="286" name="FK_BansCorp2">
+    <foreign-key id="344" parent="287" name="FK_BansCorp2">
       <ColNames>CorpID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>corp</RefTableName>
       <RefColNames>CorpID</RefColNames>
     </foreign-key>
-    <column id="339" parent="287" name="adminID">
+    <column id="345" parent="288" name="adminID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="287" name="indentificationID">
+    <column id="346" parent="288" name="indentificationID">
       <Position>2</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="287" name="is_bannedUser">
+    <column id="347" parent="288" name="is_bannedUser">
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="342" parent="287" name="FK_BansUser2">
+    <index id="348" parent="288" name="FK_BansUser2">
       <ColNames>indentificationID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="343" parent="287" name="PRIMARY">
+    <key id="349" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>adminID
 indentificationID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="344" parent="287" name="FK_BansUser">
+    <foreign-key id="350" parent="288" name="FK_BansUser">
       <ColNames>adminID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>admin</RefTableName>
       <RefColNames>adminID</RefColNames>
     </foreign-key>
-    <foreign-key id="345" parent="287" name="FK_BansUser2">
+    <foreign-key id="351" parent="288" name="FK_BansUser2">
       <ColNames>indentificationID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>applicantuser</RefTableName>
       <RefColNames>indentificationID</RefColNames>
     </foreign-key>
-    <column id="346" parent="288" name="indentificationID">
+    <column id="352" parent="289" name="indentificationID">
       <Position>1</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="347" parent="288" name="CorpID">
+    <column id="353" parent="289" name="CorpID">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="348" parent="288" name="JobID">
+    <column id="354" parent="289" name="JobID">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="349" parent="288" name="CommentID">
+    <column id="355" parent="289" name="CommentID">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="350" parent="288" name="CommentContent">
+    <column id="356" parent="289" name="CommentContent">
       <Position>5</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="351" parent="288" name="FK_Comment_On">
+    <index id="357" parent="289" name="FK_Comment_On">
       <ColNames>CorpID
 JobID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="352" parent="288" name="PRIMARY">
+    <key id="358" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>indentificationID
 CorpID
@@ -1468,13 +1499,13 @@ JobID
 CommentID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="353" parent="288" name="FK_MakeComment">
+    <foreign-key id="359" parent="289" name="FK_MakeComment">
       <ColNames>indentificationID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>applicantuser</RefTableName>
       <RefColNames>indentificationID</RefColNames>
     </foreign-key>
-    <foreign-key id="354" parent="288" name="FK_Comment_On">
+    <foreign-key id="360" parent="289" name="FK_Comment_On">
       <ColNames>CorpID
 JobID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
@@ -1482,195 +1513,127 @@ JobID</ColNames>
       <RefColNames>CorpID
 JobID</RefColNames>
     </foreign-key>
-    <column id="355" parent="289" name="CorpID">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="356" parent="289" name="CorpName">
-      <Position>2</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="357" parent="289" name="CorpAddress">
-      <Position>3</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="358" parent="289" name="CorpType">
-      <Position>4</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="359" parent="289" name="CorpPasswords">
-      <Position>5</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="360" parent="289" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>CorpID</ColNames>
-      <Primary>1</Primary>
-    </key>
     <column id="361" parent="290" name="CorpID">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="362" parent="290" name="JobID">
+    <column id="362" parent="290" name="CorpName">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="363" parent="290" name="JobName">
+    <column id="363" parent="290" name="CorpAddress">
       <Position>3</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="364" parent="290" name="Salary">
+    <column id="364" parent="290" name="CorpType">
+      <Position>4</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="365" parent="290" name="CorpPasswords">
+      <Position>5</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="366" parent="290" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CorpID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="367" parent="291" name="CorpID">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="368" parent="291" name="JobID">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="369" parent="291" name="JobName">
+      <Position>3</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="370" parent="291" name="Salary">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="365" parent="290" name="StartTime">
+    <column id="371" parent="291" name="StartTime">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="366" parent="290" name="EndTime">
+    <column id="372" parent="291" name="EndTime">
       <Position>6</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="367" parent="290" name="Demand">
+    <column id="373" parent="291" name="Demand">
       <Position>7</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="368" parent="290" name="PRIMARY">
+    <key id="374" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CorpID
 JobID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="369" parent="290" name="FK_ReleaseJob">
+    <foreign-key id="375" parent="291" name="FK_ReleaseJob">
       <ColNames>CorpID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>corp</RefTableName>
       <RefColNames>CorpID</RefColNames>
     </foreign-key>
-    <column id="370" parent="291" name="indentificationID">
+    <column id="376" parent="292" name="CorpID">
       <Position>1</Position>
-      <DataType>varchar(256)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="291" name="CorpID">
+    <column id="377" parent="292" name="JobID">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="372" parent="291" name="MessageID">
+    <column id="378" parent="292" name="Job_Tag_ID">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="373" parent="291" name="MessageContent">
+    <column id="379" parent="292" name="TagContent">
       <Position>4</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="374" parent="291" name="ApplicantIsSender">
-      <Position>5</Position>
-      <DataType>tinyint(1)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="375" parent="291" name="FK_sendOrReceive2">
-      <ColNames>CorpID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="376" parent="291" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>indentificationID
-CorpID
-MessageID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="377" parent="291" name="FK_sendOrReceive">
-      <ColNames>indentificationID</ColNames>
-      <RefSchemaName>hireapp</RefSchemaName>
-      <RefTableName>applicantuser</RefTableName>
-      <RefColNames>indentificationID</RefColNames>
-    </foreign-key>
-    <foreign-key id="378" parent="291" name="FK_sendOrReceive2">
-      <ColNames>CorpID</ColNames>
-      <RefSchemaName>hireapp</RefSchemaName>
-      <RefTableName>corp</RefTableName>
-      <RefColNames>CorpID</RefColNames>
-    </foreign-key>
-    <column id="379" parent="292" name="indentificationID">
-      <Position>1</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="380" parent="292" name="CorpID">
-      <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="381" parent="292" name="JobID">
-      <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="382" parent="292" name="Tech">
-      <Position>4</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <index id="383" parent="292" name="FK_Tags">
-      <ColNames>indentificationID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <index id="384" parent="292" name="FK_Tags2">
-      <ColNames>CorpID
-JobID</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="385" parent="292" name="PRIMARY">
+    <key id="380" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>CorpID
-indentificationID
-JobID</ColNames>
+JobID
+Job_Tag_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="386" parent="292" name="FK_Tags">
-      <ColNames>indentificationID</ColNames>
-      <RefSchemaName>hireapp</RefSchemaName>
-      <RefTableName>applicantuser</RefTableName>
-      <RefColNames>indentificationID</RefColNames>
-    </foreign-key>
-    <foreign-key id="387" parent="292" name="FK_Tags2">
+    <foreign-key id="381" parent="292" name="FK_have_job_tag">
       <ColNames>CorpID
 JobID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
@@ -1678,161 +1641,214 @@ JobID</ColNames>
       <RefColNames>CorpID
 JobID</RefColNames>
     </foreign-key>
-    <column id="388" parent="293" name="tip_or_like_ID">
+    <column id="382" parent="293" name="indentificationID">
       <Position>1</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="389" parent="293" name="Tip_or_like_type">
+    <column id="383" parent="293" name="CorpID">
       <Position>2</Position>
-      <DataType>varchar(256)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="390" parent="293" name="TIP_info">
+    <column id="384" parent="293" name="MessageID">
       <Position>3</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="391" parent="293" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>tip_or_like_ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="392" parent="294" name="App_indentificationID">
-      <Position>1</Position>
-      <DataType>varchar(256)|0s</DataType>
+      <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="393" parent="294" name="tip_or_like_ID">
-      <Position>2</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="394" parent="294" name="indentificationID">
-      <Position>3</Position>
-      <DataType>varchar(256)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="395" parent="294" name="Tip_or_like_type">
+    <column id="385" parent="293" name="MessageContent">
       <Position>4</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="396" parent="294" name="TIP_info">
+    <column id="386" parent="293" name="ApplicantIsSender">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="387" parent="293" name="FK_sendOrReceive2">
+      <ColNames>CorpID</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="388" parent="293" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>indentificationID
+CorpID
+MessageID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="389" parent="293" name="FK_sendOrReceive">
+      <ColNames>indentificationID</ColNames>
+      <RefSchemaName>hireapp</RefSchemaName>
+      <RefTableName>applicantuser</RefTableName>
+      <RefColNames>indentificationID</RefColNames>
+    </foreign-key>
+    <foreign-key id="390" parent="293" name="FK_sendOrReceive2">
+      <ColNames>CorpID</ColNames>
+      <RefSchemaName>hireapp</RefSchemaName>
+      <RefTableName>corp</RefTableName>
+      <RefColNames>CorpID</RefColNames>
+    </foreign-key>
+    <column id="391" parent="294" name="tip_or_like_ID">
+      <Position>1</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="392" parent="294" name="Tip_or_like_type">
+      <Position>2</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="393" parent="294" name="TIP_info">
+      <Position>3</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="394" parent="294" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>tip_or_like_ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="395" parent="295" name="App_indentificationID">
+      <Position>1</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="396" parent="295" name="tip_or_like_ID">
+      <Position>2</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="397" parent="295" name="indentificationID">
+      <Position>3</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="398" parent="295" name="Tip_or_like_type">
+      <Position>4</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="399" parent="295" name="TIP_info">
       <Position>5</Position>
       <DataType>varchar(256)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="397" parent="294" name="FK_Inheritance_1">
+    <index id="400" parent="295" name="FK_Inheritance_1">
       <ColNames>tip_or_like_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="398" parent="294" name="FK_applicant_being_tipped_or_liked">
+    <index id="401" parent="295" name="FK_applicant_being_tipped_or_liked">
       <ColNames>indentificationID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="399" parent="294" name="PRIMARY">
+    <key id="402" parent="295" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>App_indentificationID
 tip_or_like_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="400" parent="294" name="FK_tip_or_like_applicants">
+    <foreign-key id="403" parent="295" name="FK_tip_or_like_applicants">
       <ColNames>App_indentificationID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>applicantuser</RefTableName>
       <RefColNames>indentificationID</RefColNames>
     </foreign-key>
-    <foreign-key id="401" parent="294" name="FK_Inheritance_1">
+    <foreign-key id="404" parent="295" name="FK_Inheritance_1">
       <ColNames>tip_or_like_ID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>tip_or_like</RefTableName>
       <RefColNames>tip_or_like_ID</RefColNames>
     </foreign-key>
-    <foreign-key id="402" parent="294" name="FK_applicant_being_tipped_or_liked">
+    <foreign-key id="405" parent="295" name="FK_applicant_being_tipped_or_liked">
       <ColNames>indentificationID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>applicantuser</RefTableName>
       <RefColNames>indentificationID</RefColNames>
     </foreign-key>
-    <column id="403" parent="295" name="indentificationID">
+    <column id="406" parent="296" name="indentificationID">
       <Position>1</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="404" parent="295" name="tip_or_like_ID">
+    <column id="407" parent="296" name="tip_or_like_ID">
       <Position>2</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="405" parent="295" name="Com_indentificationID">
+    <column id="408" parent="296" name="Com_indentificationID">
       <Position>3</Position>
       <DataType>varchar(256)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="406" parent="295" name="CorpID">
+    <column id="409" parent="296" name="CorpID">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="407" parent="295" name="JobID">
+    <column id="410" parent="296" name="JobID">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="408" parent="295" name="CommentID">
+    <column id="411" parent="296" name="CommentID">
       <Position>6</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="409" parent="295" name="Tip_or_like_type">
+    <column id="412" parent="296" name="Tip_or_like_type">
       <Position>7</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="410" parent="295" name="TIP_info">
+    <column id="413" parent="296" name="TIP_info">
       <Position>8</Position>
       <DataType>varchar(256)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="411" parent="295" name="FK_Inheritance_2">
+    <index id="414" parent="296" name="FK_Inheritance_2">
       <ColNames>tip_or_like_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="412" parent="295" name="FK_tip_or_like_a_comment">
+    <index id="415" parent="296" name="FK_tip_or_like_a_comment">
       <ColNames>Com_indentificationID
 CorpID
 JobID
 CommentID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="413" parent="295" name="PRIMARY">
+    <key id="416" parent="296" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>indentificationID
 tip_or_like_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="414" parent="295" name="FK_tip_or_like_comments">
+    <foreign-key id="417" parent="296" name="FK_tip_or_like_comments">
       <ColNames>indentificationID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>applicantuser</RefTableName>
       <RefColNames>indentificationID</RefColNames>
     </foreign-key>
-    <foreign-key id="415" parent="295" name="FK_Inheritance_2">
+    <foreign-key id="418" parent="296" name="FK_Inheritance_2">
       <ColNames>tip_or_like_ID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>tip_or_like</RefTableName>
       <RefColNames>tip_or_like_ID</RefColNames>
     </foreign-key>
-    <foreign-key id="416" parent="295" name="FK_tip_or_like_a_comment">
+    <foreign-key id="419" parent="296" name="FK_tip_or_like_a_comment">
       <ColNames>Com_indentificationID
 CorpID
 JobID
@@ -1844,67 +1860,67 @@ CorpID
 JobID
 CommentID</RefColNames>
     </foreign-key>
-    <column id="417" parent="296" name="indentificationID">
+    <column id="420" parent="297" name="indentificationID">
       <Position>1</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="418" parent="296" name="tip_or_like_ID">
+    <column id="421" parent="297" name="tip_or_like_ID">
       <Position>2</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="419" parent="296" name="CorpID">
+    <column id="422" parent="297" name="CorpID">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="420" parent="296" name="JobID">
+    <column id="423" parent="297" name="JobID">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="421" parent="296" name="Tip_or_like_type">
+    <column id="424" parent="297" name="Tip_or_like_type">
       <Position>5</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="422" parent="296" name="TIP_info">
+    <column id="425" parent="297" name="TIP_info">
       <Position>6</Position>
       <DataType>varchar(256)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="423" parent="296" name="FK_Inheritance_3">
+    <index id="426" parent="297" name="FK_Inheritance_3">
       <ColNames>tip_or_like_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="424" parent="296" name="FK_job_being_tipped_or_liked">
+    <index id="427" parent="297" name="FK_job_being_tipped_or_liked">
       <ColNames>CorpID
 JobID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="425" parent="296" name="PRIMARY">
+    <key id="428" parent="297" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>indentificationID
 tip_or_like_ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="426" parent="296" name="FK_tip_or_like_a_job">
+    <foreign-key id="429" parent="297" name="FK_tip_or_like_a_job">
       <ColNames>indentificationID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>applicantuser</RefTableName>
       <RefColNames>indentificationID</RefColNames>
     </foreign-key>
-    <foreign-key id="427" parent="296" name="FK_Inheritance_3">
+    <foreign-key id="430" parent="297" name="FK_Inheritance_3">
       <ColNames>tip_or_like_ID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
       <RefTableName>tip_or_like</RefTableName>
       <RefColNames>tip_or_like_ID</RefColNames>
     </foreign-key>
-    <foreign-key id="428" parent="296" name="FK_job_being_tipped_or_liked">
+    <foreign-key id="431" parent="297" name="FK_job_being_tipped_or_liked">
       <ColNames>CorpID
 JobID</ColNames>
       <RefSchemaName>hireapp</RefSchemaName>
