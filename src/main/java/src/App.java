@@ -413,13 +413,14 @@ public class App {
                     corp_id++;
                 }
                 end += 1000;
+
+                pstm.executeBatch();
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
                 System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
             }
             //执行批处理
-            pstm.executeBatch();
 //                //提交事务
 //                conn.commit();
             //边界值自增10W
@@ -498,13 +499,90 @@ public class App {
                     corp_id++;
                 }
                 end += 1000;
+
+                pstm.executeBatch();
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
                 System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
             }
             //执行批处理
-            pstm.executeBatch();
+//                //提交事务
+//                conn.commit();
+            //边界值自增10W
+            //关闭总计时
+            long eTime1 = System.currentTimeMillis();
+            //输出
+            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+        } catch (
+                SQLException e) {
+            e.printStackTrace();
+        } catch (
+                ClassNotFoundException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+
+
+    @org.junit.Test
+    public void insert_applicant_to_corp() {
+
+        long begin = 1;
+        long end = begin + 1000;///每次循环插入的数据量
+        long sum = 0;
+
+        BigInteger applicant_id = new BigInteger("310103199210102000");
+
+        //定义连接、statement对象
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        int corp_id = 1;
+
+        try {
+            //加载jdbc驱动
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //连接mysql
+            conn = DriverManager.getConnection(url, user, password);
+            //将自动提交关闭
+            // conn.setAutoCommit(false);
+            //编写sql
+            String sql = "INSERT INTO applicant_to_corp VALUES (?,?,?,?)";
+            //预编译sql
+            pstm = conn.prepareStatement(sql);
+            //开始总计时
+            long bTime1 = System.currentTimeMillis();
+
+            //循环10次，每次1000数据，一共1万
+            for (int i = 0; i < 10; i++) {
+                //开始循环
+
+                long bTime = System.currentTimeMillis();
+                while (begin < end) {
+                    int num= RandomUtils.nextInt(0, 15);
+                    sum+=num;
+                    for(int j=0;j<num;j++) {
+                        applicant_id=new BigInteger("310103199210102000");
+                        applicant_id=applicant_id.add(new BigInteger(RandomUtils.nextInt((j+1)*1000, (j+1)*1000*2-1) +""));
+                        pstm.setString(1, applicant_id.toString());
+
+                        System.out.println(applicant_id.toString());
+                        pstm.setInt(2, corp_id);
+                        pstm.setBoolean(3, j % 2 == 1);
+                        pstm.setBoolean(4, j % 2 == 0);
+                        pstm.addBatch();
+                    }
+                    corp_id++;
+                    begin++;
+                }
+                end += 1000;
+                //关闭分段计时
+
+                pstm.executeBatch();
+                long eTime = System.currentTimeMillis();
+                //输出
+                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+            }
 //                //提交事务
 //                conn.commit();
             //边界值自增10W
