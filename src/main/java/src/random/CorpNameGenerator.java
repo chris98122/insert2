@@ -29,7 +29,7 @@ public class CorpNameGenerator extends GenericGenerator {
         while (true) {
             str = "";
             int index = RandomUtils.nextInt(0, CorpList.base.length() - 3);
-            int length = RandomUtils.nextInt(2, 2);
+            int length = RandomUtils.nextInt(2, 3);
             str = CorpList.base.substring(index, index + length);
             index = RandomUtils.nextInt(0, CorpList.base.length() - 6);
             length = RandomUtils.nextInt(2, 5);

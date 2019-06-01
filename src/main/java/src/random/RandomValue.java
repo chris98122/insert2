@@ -50,7 +50,7 @@ public class RandomValue {
     public static String getChineseName() {
         int index = RandomUtils.nextInt(0, firstName.length() - 1);
         String first = firstName.substring(index, index + 1);
-        int sex = RandomUtils.nextInt(0, 1);
+        int sex = RandomUtils.nextInt(0, 2);
         String str = boy;
         int length = boy.length();
         if (sex == 0) {
@@ -62,7 +62,7 @@ public class RandomValue {
         }
         index = RandomUtils.nextInt(0, length - 1);
         String second = str.substring(index, index + 1);
-        int hasThird = RandomUtils.nextInt(0, 1);
+        int hasThird = RandomUtils.nextInt(0, 2);
         String third = "";
         if (hasThird == 1) {
             index = RandomUtils.nextInt(0, length - 1);
@@ -104,7 +104,7 @@ public class RandomValue {
         Date date = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
-        calendar.add(calendar.DATE, RandomUtils.nextInt(0, 100));//把日期往后增加一天.整数往后推,负数往前移动 
+        calendar.add(calendar.DATE, RandomUtils.nextInt(-100, 100));//把日期往后增加一天.整数往后推,负数往前移动 
         date = calendar.getTime();
         return new java.sql.Date(date.getTime());
     }
@@ -120,10 +120,13 @@ public class RandomValue {
 
     public static String getJobName() {
         return JobGenerator.genName();
-
     }
 
     public static String getDemand(String JobName) {
         return JobGenerator.genDemand(JobName);
+    }
+
+    public static String getTagContent() {
+        return TagGenerator.getInstance().generate();
     }
 }

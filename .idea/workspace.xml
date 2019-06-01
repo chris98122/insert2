@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2079bf94-ec90-4bd2-a209-9c013107d21f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f567af5-7457-47ed-9263-c2eaf185b609.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6f567af5-7457-47ed-9263-c2eaf185b609.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/src/random/TagList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/src/random/JobList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/random/JobList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/src/random/RandomValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/random/RandomValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/random/JobList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/random/JobList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/random/RandomValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/random/RandomValue.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -51,20 +52,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="312" column="42" selection-start-line="312" selection-start-column="42" selection-end-line="312" selection-end-column="42" />
+            <state relative-caret-position="155">
+              <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#501#519#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/jobs">
+        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/admin">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -73,24 +75,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/corp">
+        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/bansuser">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -105,37 +93,26 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applyforjob">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicanttag">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicant_to_corp">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobList.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/RandomValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="513" column="14" selection-start-line="513" selection-start-column="14" selection-end-line="513" selection-end-column="14" />
+            <state relative-caret-position="130">
+              <caret line="52" column="40" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#4662#4663#0" expanded="true" />
+                <element signature="e#4707#4708#0" expanded="true" />
+                <element signature="e#4859#4860#0" expanded="true" />
+                <element signature="e#4919#4920#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1801">
+              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,18 +121,50 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/RandomValue.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="163">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4624#4625#0" expanded="true" />
-                <element signature="e#4688#4689#0" expanded="true" />
-                <element signature="e#3823#3824#0" expanded="true" />
-                <element signature="e#3877#3878#0" expanded="true" />
-                <element signature="e#4101#4102#0" expanded="true" />
-                <element signature="e#4155#4156#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="29" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+                <element signature="e#819#820#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/ChineseAddressGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="19" column="72" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="72" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -175,6 +184,9 @@
       <find>getnum</find>
       <find>base</find>
       <find>科技</find>
+      <find>tag_id</find>
+      <find>支持</find>
+      <find>RandomUtils.nextInt(0,1)</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -187,12 +199,14 @@
         <option value="$PROJECT_DIR$/src/main/java/src/random/ChineseAddressGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/ChineseAreaList.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/CorpList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/src/random/JobList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/src/random/RandomValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/random/JobList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/random/TagGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/random/TagList.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/random/RandomValue.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java" />
       </list>
     </option>
   </component>
@@ -288,13 +302,14 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559386751700" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559393518200" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -313,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.App.insertJobs">
+  <component name="RunManager" selected="JUnit.App.insertcorp">
     <configuration name="App.insertApplicant" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="insert2" />
       <extension name="coverage">
@@ -330,7 +345,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="App.insertJobs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="App.insertApplicantTags" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="insert2" />
       <extension name="coverage">
         <pattern>
@@ -340,7 +355,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="src" />
       <option name="MAIN_CLASS_NAME" value="src.App" />
-      <option name="METHOD_NAME" value="insertJobs" />
+      <option name="METHOD_NAME" value="insertApplicantTags" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App.insertJobTags" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="insert2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src" />
+      <option name="MAIN_CLASS_NAME" value="src.App" />
+      <option name="METHOD_NAME" value="insertJobTags" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -380,10 +411,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.App.insertJobs" />
         <item itemvalue="JUnit.App.insertcorp" />
         <item itemvalue="JUnit.App.insertApplicant" />
+        <item itemvalue="JUnit.App.insertJobTags" />
         <item itemvalue="JUnit.App.insertadmin" />
+        <item itemvalue="JUnit.App.insertApplicantTags" />
       </list>
     </recent_temporary>
   </component>
@@ -397,54 +429,55 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1559373810723</updated>
-      <workItem from="1559373813865" duration="13645000" />
+      <workItem from="1559373813865" duration="17165000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="App_insertcorp - 2019.06.01 at 18h 40m 08s.xml">
-      <configuration name="App.insertcorp" configurationId="JUnit" />
+    <history-entry file="App_insertJobTags - 2019.06.01 at 20h 39m 06s.xml">
+      <configuration name="App.insertJobTags" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="App_insertJobs - 2019.06.01 at 18h 40m 22s.xml">
-      <configuration name="App.insertJobs" configurationId="JUnit" />
+    <history-entry file="App_insertJobTags - 2019.06.01 at 20h 40m 36s.xml">
+      <configuration name="App.insertJobTags" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="App_insertcorp - 2019.06.01 at 18h 41m 15s.xml">
-      <configuration name="App.insertcorp" configurationId="JUnit" />
+    <history-entry file="App_insertJobTags - 2019.06.01 at 20h 40m 59s.xml">
+      <configuration name="App.insertJobTags" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="App_insertJobs - 2019.06.01 at 18h 41m 40s.xml">
-      <configuration name="App.insertJobs" configurationId="JUnit" />
+    <history-entry file="App_insertJobTags - 2019.06.01 at 20h 43m 13s.xml">
+      <configuration name="App.insertJobTags" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="App_insertcorp - 2019.06.01 at 18h 43m 34s.xml">
-      <configuration name="App.insertcorp" configurationId="JUnit" />
+    <history-entry file="App_insertApplicantTags - 2019.06.01 at 20h 45m 04s.xml">
+      <configuration name="App.insertApplicantTags" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="App_insertJobs - 2019.06.01 at 18h 43m 42s.xml">
-      <configuration name="App.insertJobs" configurationId="JUnit" />
+    <history-entry file="App_insertadmin - 2019.06.01 at 20h 45m 36s.xml">
+      <configuration name="App.insertadmin" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="App_insertApplicant - 2019.06.01 at 18h 55m 57s.xml">
+    <history-entry file="App_insertJobTags - 2019.06.01 at 20h 45m 45s.xml">
+      <configuration name="App.insertJobTags" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="App_insertApplicant - 2019.06.01 at 20h 49m 28s.xml">
       <configuration name="App.insertApplicant" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="App_insertApplicant - 2019.06.01 at 18h 58m 36s.xml">
+    <history-entry file="App_insertApplicant - 2019.06.01 at 20h 49m 51s.xml">
       <configuration name="App.insertApplicant" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="App_insertcorp - 2019.06.01 at 18h 59m 00s.xml">
-      <configuration name="App.insertcorp" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="App_insertJobs - 2019.06.01 at 18h 59m 17s.xml">
-      <configuration name="App.insertJobs" configurationId="JUnit" />
+    <history-entry file="App_insertApplicant - 2019.06.01 at 20h 50m 37s.xml">
+      <configuration name="App.insertApplicant" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13645000" />
+    <option name="totallyTimeSpent" value="17165000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
       <window_info id="Capture Tool" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28536782" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28536782" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" weight="0.32978722" />
       <window_info anchor="bottom" id="Terminal" />
@@ -456,7 +489,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.053285968" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.1651865" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.106571935" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,7 +497,7 @@
       <window_info anchor="right" id="Maven" weight="0.1196443" />
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info active="true" anchor="right" id="Database" visible="true" weight="0.29102668" />
+      <window_info anchor="right" id="Database" visible="true" weight="0.16895716" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -486,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/admin">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/comments">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -507,35 +533,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/ChineseAddressGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" column="72" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/random/ChineseAreaList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-10667">
           <caret line="8" column="62" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#294#311#0" expanded="true" />
-            <element signature="e#983#984#0" expanded="true" />
-            <element signature="e#1014#1015#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -564,38 +567,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="513" column="14" selection-start-line="513" selection-start-column="14" selection-end-line="513" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicanttag">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicant_to_corp">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicantuser">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applyforjob">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
@@ -609,31 +581,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java">
+    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicanttag">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
+        <state relative-caret-position="266">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/RandomValue.java">
+    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applyforjob">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4624#4625#0" expanded="true" />
-            <element signature="e#4688#4689#0" expanded="true" />
-            <element signature="e#3823#3824#0" expanded="true" />
-            <element signature="e#3877#3878#0" expanded="true" />
-            <element signature="e#4101#4102#0" expanded="true" />
-            <element signature="e#4155#4156#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="55">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar!/com/mysql/cj/jdbc/exceptions/SQLExceptionsMapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/jobtag">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -644,10 +633,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/admin">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/bansuser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="312" column="42" selection-start-line="312" selection-start-column="42" selection-end-line="312" selection-end-column="42" />
+        <state relative-caret-position="155">
+          <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#501#519#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicantuser">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/RandomValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="52" column="40" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4662#4663#0" expanded="true" />
+            <element signature="e#4707#4708#0" expanded="true" />
+            <element signature="e#4859#4860#0" expanded="true" />
+            <element signature="e#4919#4920#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/ChineseAddressGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="19" column="72" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1801">
+          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#819#820#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
