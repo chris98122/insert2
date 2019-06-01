@@ -7,13 +7,17 @@ import java.math.BigInteger;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
+import java.util.HashSet;
 
+import java.util.Collection;
 public class App {
     private String url = "jdbc:mysql://localhost:3306/hireapp?useServerPrepStmts=false&rewriteBatchedStatements=true&useUnicode=true&amp&serverTimezone=GMT";
     private String user = "root";
     private String password = "root";
 
     private static Map<Integer, Integer> corp_job_num = new HashMap<Integer, Integer>();
+
 
     @org.junit.Test
     public void insertApplicant() {
@@ -326,10 +330,9 @@ public class App {
                         pstm.setInt(2, tag_id);
                         pstm.setString(3, RandomValue.getTagContent());
                         tag_id++;
+                        pstm.addBatch();
                     }
                     begin++;
-                    if (tag_num > 0)
-                        pstm.addBatch();
                     //添加到同一个批处理中
                     id = id.add(one);
                 }
@@ -401,10 +404,94 @@ public class App {
                             pstm.setInt(3, tag_id);
                             pstm.setString(4, RandomValue.getTagContent());
                             tag_id++;
+                            pstm.addBatch();
                         }
 
-                        if (tag_num > 0)
+                        begin++;
+                        //添加到同一个批处理中
+                    }
+                    corp_id++;
+                }
+                end += 1000;
+                //关闭分段计时
+                long eTime = System.currentTimeMillis();
+                //输出
+                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+            }
+            //执行批处理
+            pstm.executeBatch();
+//                //提交事务
+//                conn.commit();
+            //边界值自增10W
+            //关闭总计时
+            long eTime1 = System.currentTimeMillis();
+            //输出
+            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+        } catch (
+                SQLException e) {
+            e.printStackTrace();
+        } catch (
+                ClassNotFoundException e1) {
+            e1.printStackTrace();
+        }
+    }
+
+
+
+    @org.junit.Test
+    public void insertapply() {
+        insertcorp();
+        insertJobs();
+        insertApplicant();
+
+        long begin = 1;
+        long end = begin + 1000;///每次循环插入的数据量
+        long sum = 0;
+
+        BigInteger applicant_id = new BigInteger("310103199210102000");
+        BigInteger one = new BigInteger("1");
+
+
+        //定义连接、statement对象
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        int corp_id = 1;
+
+        try {
+            //加载jdbc驱动
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //连接mysql
+            conn = DriverManager.getConnection(url, user, password);
+            //将自动提交关闭
+            // conn.setAutoCommit(false);
+            //编写sql
+            String sql = "INSERT INTO applyforjob VALUES (?,?,?,?)";
+            //预编译sql
+            pstm = conn.prepareStatement(sql);
+            //开始总计时
+            long bTime1 = System.currentTimeMillis();
+
+            //循环10次，每次1000数据，一共1万
+            for (int i = 0; i < 10; i++) {
+                //开始循环
+
+                long bTime = System.currentTimeMillis();
+                while (begin < end) {
+                    //开启分段计时，计1W数据耗时
+                    for (int k = 0; k < corp_job_num.get(corp_id); k++) {
+                        int job_id = k + 1;
+                        int apply_num= RandomUtils.nextInt(0, 5);
+                        sum+=apply_num;
+                        for (int j = 0; j < apply_num; j++) {
+                            applicant_id=new BigInteger("310103199210102000");
+                            applicant_id=applicant_id.add(new BigInteger(RandomUtils.nextInt((j+1)*1000, (j+1)*1000*2-1) +""));
+                            //随机applicant
+                            pstm.setString(1, applicant_id.toString());
+                            pstm.setInt(2, corp_id);
+                            pstm.setInt(3, job_id);
+                            pstm.setDate(4, RandomValue.getStartTime());//这里的时间可能不在Job的时间内
                             pstm.addBatch();
+                        }
                         begin++;
                         //添加到同一个批处理中
                     }

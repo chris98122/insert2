@@ -104,7 +104,7 @@ public class RandomValue {
         Date date = new Date();
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
-        calendar.add(calendar.DATE, RandomUtils.nextInt(-100, 100));//把日期往后增加一天.整数往后推,负数往前移动 
+        calendar.add(calendar.DATE, RandomUtils.nextInt(0, 100));//把日期往后增加一天.整数往后推,负数往前移动 
         date = calendar.getTime();
         return new java.sql.Date(date.getTime());
     }
