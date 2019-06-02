@@ -811,6 +811,7 @@ public class App {
                                 pstm_tip.setString(8, null);
 
                             }
+                            pstm_tip.addBatch();
 
                             comment_id++;
                         }
