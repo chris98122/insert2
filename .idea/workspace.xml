@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2079bf94-ec90-4bd2-a209-9c013107d21f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/src/random/JobList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/random/JobList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/src/random/TagList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/random/TagList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/random/JobList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/random/JobList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/random/TagList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/random/TagList.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,12 +58,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="982" column="35" lean-forward="true" selection-start-line="982" selection-start-column="35" selection-end-line="982" selection-end-column="35" />
+            <state relative-caret-position="-9669">
+              <caret line="462" column="16" selection-start-line="462" selection-start-column="16" selection-end-line="462" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#702#723#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicant_to_corp">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -144,15 +154,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/bansuser">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicanttag">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -211,9 +212,9 @@
         <option value="$PROJECT_DIR$/src/main/java/src/random/CommentList.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/RandomValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/src/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/JobList.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/TagList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/App.java" />
       </list>
     </option>
   </component>
@@ -309,7 +310,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559467307250" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559468872415" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -335,7 +336,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.App.insertAll">
+  <component name="RunManager" selected="JUnit.App.insert_applicant_to_corp">
     <configuration name="App" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="insert2" />
       <extension name="coverage">
@@ -362,22 +363,6 @@
       <option name="PACKAGE_NAME" value="src" />
       <option name="MAIN_CLASS_NAME" value="src.App" />
       <option name="METHOD_NAME" value="insertAll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="App.insertApplicantAndBanApplicant" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="insert2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="src" />
-      <option name="MAIN_CLASS_NAME" value="src.App" />
-      <option name="METHOD_NAME" value="insertApplicantAndBanApplicant" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -415,13 +400,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="App.insert_applicant_to_corp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="insert2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src" />
+      <option name="MAIN_CLASS_NAME" value="src.App" />
+      <option name="METHOD_NAME" value="insert_applicant_to_corp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.App.insert_applicant_to_corp" />
         <item itemvalue="JUnit.App.insertAll" />
         <item itemvalue="JUnit.App" />
         <item itemvalue="JUnit.App.insertTipOrLike" />
         <item itemvalue="JUnit.App.insertApplicantTags" />
-        <item itemvalue="JUnit.App.insertApplicantAndBanApplicant" />
       </list>
     </recent_temporary>
   </component>
@@ -436,14 +437,11 @@
       <option name="presentableId" value="Default" />
       <updated>1559373810723</updated>
       <workItem from="1559373813865" duration="28013000" />
-      <workItem from="1559453638116" duration="12959000" />
+      <workItem from="1559453638116" duration="14438000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="App_insertAll - 2019.06.02 at 15h 11m 14s.xml">
-      <configuration name="App.insertAll" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="App_insertAll - 2019.06.02 at 15h 14m 23s.xml">
       <configuration name="App.insertAll" configurationId="JUnit" />
     </history-entry>
@@ -471,9 +469,12 @@
     <history-entry file="App_insertAll - 2019.06.02 at 17h 20m 24s.xml">
       <configuration name="App.insertAll" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="App_insertAll - 2019.06.02 at 17h 42m 55s.xml">
+      <configuration name="App.insertAll" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40972000" />
+    <option name="totallyTimeSpent" value="42451000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -507,7 +508,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.1196443" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.024252223" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.16491511" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -675,13 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicant_to_corp">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicantuser">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -795,10 +789,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicant_to_corp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="982" column="35" lean-forward="true" selection-start-line="982" selection-start-column="35" selection-end-line="982" selection-end-column="35" />
+        <state relative-caret-position="-9669">
+          <caret line="462" column="16" selection-start-line="462" selection-start-column="16" selection-end-line="462" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#702#723#0" expanded="true" />

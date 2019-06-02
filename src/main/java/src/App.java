@@ -575,7 +575,7 @@ public class App {
             pstm = conn.prepareStatement(sql);
             //开始总计时
             long bTime1 = System.currentTimeMillis();
-
+            long tmp_sum=0;
             //循环10次，每次1000数据，一共10~50万
 
             applicant_id = new BigInteger("310103199210102000");
@@ -585,8 +585,10 @@ public class App {
                 while (begin < end) {
                     int num = RandomUtils.nextInt(0, 5);
                     sum += num;
-                    if(sum >= 99900)//十万个applicant
+                    tmp_sum += num;
+                    if(tmp_sum >= 99900)//十万个applicant
                     {
+                        tmp_sum = 0;
                         applicant_id = new BigInteger("310103199210102000");
                     }
                     for (int j = 0; j < num; j++) {
