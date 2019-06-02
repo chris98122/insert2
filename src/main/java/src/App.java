@@ -598,8 +598,8 @@ public class App {
                         //  System.out.println(applicant_id.toString());
                         pstm.setInt(2, corp_id);
                         Boolean a = RandomUtils.nextInt(0, 10) % 8 == 1;
-                        pstm.setBoolean(3, a);
-                        pstm.setBoolean(4, !a);
+                        pstm.setBoolean(3, !a);
+                        pstm.setBoolean(4, a);
                         pstm.addBatch();
                     }
                     corp_id++;
