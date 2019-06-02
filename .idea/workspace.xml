@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2079bf94-ec90-4bd2-a209-9c013107d21f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/src/random/JobList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/random/JobList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/src/random/TagList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/random/TagList.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,14 +54,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="425" column="51" lean-forward="true" selection-start-line="422" selection-start-column="59" selection-end-line="425" selection-end-column="51" />
+            <state relative-caret-position="249">
+              <caret line="982" column="35" lean-forward="true" selection-start-line="982" selection-start-column="35" selection-end-line="982" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#702#723#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,11 +119,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+            <state relative-caret-position="271">
+              <caret line="513" column="30" selection-start-line="513" selection-start-column="30" selection-end-line="513" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -124,20 +134,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1653">
-              <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+            <state relative-caret-position="228">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/banscorp">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -207,12 +208,12 @@
         <option value="$PROJECT_DIR$/src/main/java/src/random/CorpList.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/TagGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/src/random/TagList.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/CommentList.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/RandomValue.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/JobList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/random/TagList.java" />
       </list>
     </option>
   </component>
@@ -308,7 +309,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559467109911" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559467307250" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -435,14 +436,11 @@
       <option name="presentableId" value="Default" />
       <updated>1559373810723</updated>
       <workItem from="1559373813865" duration="28013000" />
-      <workItem from="1559453638116" duration="12749000" />
+      <workItem from="1559453638116" duration="12959000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="App_insertAll - 2019.06.02 at 15h 08m 06s.xml">
-      <configuration name="App.insertAll" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="App_insertAll - 2019.06.02 at 15h 11m 14s.xml">
       <configuration name="App.insertAll" configurationId="JUnit" />
     </history-entry>
@@ -470,9 +468,12 @@
     <history-entry file="App_insertAll - 2019.06.02 at 17h 16m 05s.xml">
       <configuration name="App.insertAll" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="App_insertAll - 2019.06.02 at 17h 20m 24s.xml">
+      <configuration name="App.insertAll" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40762000" />
+    <option name="totallyTimeSpent" value="40972000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -487,7 +488,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.07282416" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.053285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41740674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -578,16 +579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -774,21 +765,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="425" column="51" lean-forward="true" selection-start-line="422" selection-start-column="59" selection-end-line="425" selection-end-column="51" />
+        <state relative-caret-position="163">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#702#723#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/random/TagList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="102" column="33" selection-start-line="102" selection-start-column="33" selection-end-line="102" selection-end-column="33" />
+        <state relative-caret-position="228">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -797,10 +787,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="12" column="38" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
+        <state relative-caret-position="271">
+          <caret line="513" column="30" selection-start-line="513" selection-start-column="30" selection-end-line="513" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="982" column="35" lean-forward="true" selection-start-line="982" selection-start-column="35" selection-end-line="982" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#702#723#0" expanded="true" />
           </folding>
         </state>
       </provider>
