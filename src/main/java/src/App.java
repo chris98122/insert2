@@ -786,32 +786,35 @@ public class App {
                             pstm2.setBoolean(6, j % 4 == 1);
 
                             pstm2.addBatch();
+                            if(tip_id<100000)//tip or like 父表只有十万所以子表只写十万
+                            {
 
 
-                            pstm_tip.setInt(2, tip_id);
-                            tip_id++;
+                                pstm_tip.setInt(2, tip_id);
+                                tip_id++;
 
-                            pstm_tip.setString(3, applicant_id.toString());//admin number = 5000
+                                pstm_tip.setString(3, applicant_id.toString());//admin number = 5000
 
-                            pstm_tip.setInt(4, corp_id);
-                            pstm_tip.setInt(5, job_id);
-                            pstm_tip.setInt(6, comment_id);
-                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 1000) + ""));
+                                pstm_tip.setInt(4, corp_id);
+                                pstm_tip.setInt(5, job_id);
+                                pstm_tip.setInt(6, comment_id);
+                                applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 1000) + ""));
 
-                            pstm_tip.setString(1, applicant_id.toString());
-
-
-                            if (RandomUtils.nextInt(0, 2) == 1) {
-                                pstm_tip.setString(7, "tip");
-                                pstm_tip.setString(8, RandomValue.getPassword(6, 10));
+                                pstm_tip.setString(1, applicant_id.toString());
 
 
-                            } else {
-                                pstm_tip.setString(7, "like");
-                                pstm_tip.setString(8, null);
+                                if (RandomUtils.nextInt(0, 2) == 1) {
+                                    pstm_tip.setString(7, "tip");
+                                    pstm_tip.setString(8, RandomValue.getPassword(6, 10));
 
+
+                                } else {
+                                    pstm_tip.setString(7, "like");
+                                    pstm_tip.setString(8, null);
+
+                                }
+                                pstm_tip.addBatch();
                             }
-                            pstm_tip.addBatch();
 
                             comment_id++;
                         }
