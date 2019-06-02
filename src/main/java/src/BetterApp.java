@@ -8,13 +8,9 @@ import java.math.BigInteger;
 import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-import java.util.HashSet;
 
-import java.util.Collection;
-
-public class App {
-    private String url = "jdbc:mysql://localhost:3306/hireapp?useServerPrepStmts=false&rewriteBatchedStatements=true&useUnicode=true&amp&serverTimezone=GMT";
+public class BetterApp {
+    private String url = "jdbc:mysql://localhost:3306/betterhireapp?useServerPrepStmts=false&rewriteBatchedStatements=true&useUnicode=true&amp&serverTimezone=GMT";
     private String user = "root";
     private String password = "root";
 
@@ -23,7 +19,7 @@ public class App {
     private static Map<BigInteger, Integer> applicant_apply = new HashMap<BigInteger, Integer>();
 
 
-    @org.junit.Test
+    @Test
     public void insertApplicantAndBanApplicant() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
@@ -46,7 +42,7 @@ public class App {
             //编写sql
             String sql = "INSERT INTO  ApplicantUser VALUES (?,?,?)";
 
-            String sql2 = "INSERT INTO  bansuser VALUES (?,?,?)";
+            String sql2 = "INSERT INTO  bansuser VALUES (?,?)";
             //预编译sql
             pstm = conn.prepareStatement(sql);
             pstm2 = conn.prepareStatement(sql2);
@@ -68,12 +64,13 @@ public class App {
                     pstm.setString(3, RandomValue.getPassword(6, 10));
                     //添加到同一个批处理中
                     pstm.addBatch();
+                    if(RandomUtils.nextInt(0, 5) % 4 == 1) {
 
-                    pstm2.setInt(1, RandomUtils.nextInt(1, 5000));
-                    pstm2.setString(2, id.toString(10));
-                    pstm2.setBoolean(3, RandomUtils.nextInt(0, 10) % 4 == 1);
+                        pstm2.setInt(1, RandomUtils.nextInt(1, 5000));
+                        pstm2.setString(2, id.toString(10));
 
-                    pstm2.addBatch();
+                        pstm2.addBatch();
+                    }
 
                     begin++;
                     id = id.add(one);
@@ -102,7 +99,7 @@ public class App {
     }
 
 
-    @org.junit.Test
+    @Test
     public void insertadmin() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
@@ -164,7 +161,7 @@ public class App {
     }
 
 
-    @org.junit.Test
+    @Test
     public void insertcorpAndBanCorp() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
@@ -184,7 +181,7 @@ public class App {
             //编写sql
             String sql = "INSERT INTO corp VALUES (?,?,?,?,?)";
 
-            String sql2 = "INSERT INTO banscorp VALUES (?,?,?)";
+            String sql2 = "INSERT INTO banscorp VALUES (?,?)";
             //预编译sql
             pstm = conn.prepareStatement(sql);//insert corp
 
@@ -209,11 +206,12 @@ public class App {
                     pstm.setString(5, RandomValue.getPassword(6, 10));
                     //添加到同一个批处理中
                     pstm.addBatch();
-                    pstm2.setInt(1, RandomUtils.nextInt(1, 5000));
-                    pstm2.setInt(2, corp_id);
-                    pstm2.setBoolean(3, RandomUtils.nextInt(1, 10) % 4 == 1);
 
-                    pstm2.addBatch();
+                    if(RandomUtils.nextInt(1, 10) % 4 == 1) {
+                        pstm2.setInt(1, RandomUtils.nextInt(1, 5000));
+                        pstm2.setInt(2, corp_id);
+                        pstm2.addBatch();
+                    }
                     begin++;
                     corp_id++;
                 }
@@ -241,7 +239,7 @@ public class App {
     }
 
 
-    @org.junit.Test
+    @Test
     public void insertJobs() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
@@ -317,7 +315,7 @@ public class App {
         }
     }
 
-    @org.junit.Test
+    @Test
     public void insertApplicantTags() {
         BigInteger id = new BigInteger("310103199210102000");
         BigInteger one = new BigInteger("1");
@@ -337,11 +335,14 @@ public class App {
             //将自动提交关闭
             // conn.setAutoCommit(false);
             //编写sql
-            String sql = "INSERT INTO applicanttag VALUES (?,?,?)";
+            String sql = "INSERT INTO applicant_tag VALUES (?,?)";
             //预编译sql
             pstm = conn.prepareStatement(sql);
             //开始总计时
             long bTime1 = System.currentTimeMillis();
+
+             Map<Integer, Integer> used_tag = new HashMap<Integer, Integer>();
+
 
             //循环10次，每次1000数据，一共1万
             for (int i = 0; i < 100; i++) {
@@ -350,12 +351,16 @@ public class App {
                 while (begin < end) {
                     int tag_num = RandomUtils.nextInt(0, 3);
                     sum += tag_num;
-                    int tag_id = 1;
+                    used_tag.clear();
                     for (int j = 0; j < tag_num; j++) {
-                        pstm.setString(1, id.toString(10));
-                        pstm.setInt(2, tag_id);
-                        pstm.setString(3, RandomValue.getTagContent());
-                        tag_id++;
+                        pstm.setString(2, id.toString(10));
+                        int tag_id =  RandomUtils.nextInt(1, 10000);
+                        while( used_tag.get(tag_id) !=null)
+                        {
+                              tag_id =  RandomUtils.nextInt(1, 10000);
+                        }
+                        used_tag.put(tag_id,1);
+                        pstm.setInt(1, tag_id);
                         pstm.addBatch();
                     }
                     begin++;
@@ -382,7 +387,7 @@ public class App {
         }
     }
 
-    @org.junit.Test
+    @Test
     public void insertJobTags() {
 
         long begin = 1;
@@ -402,11 +407,14 @@ public class App {
             //将自动提交关闭
             // conn.setAutoCommit(false);
             //编写sql
-            String sql = "INSERT INTO jobtag VALUES (?,?,?,?)";
+            String sql = "INSERT INTO job_tag VALUES (?,?,?)";
             //预编译sql
             pstm = conn.prepareStatement(sql);
             //开始总计时
             long bTime1 = System.currentTimeMillis();
+
+            Map<Integer, Integer> used_tag = new HashMap<Integer, Integer>();
+
 
             //循环10次，每次1000数据，一共10万
             for (int i = 0; i < 100; i++) {
@@ -417,15 +425,21 @@ public class App {
                     //开启分段计时，计1W数据耗时
                     for (int k = 0; k < corp_job_num.get(corp_id); k++) {
                         int job_id = k + 1;
-                        int tag_id = 1;
                         int tag_num = RandomUtils.nextInt(0, 3);
                         sum += tag_num;
+
+                        used_tag.clear();
                         for (int j = 0; j < tag_num; j++) {
+
+                            int tag_id =  RandomUtils.nextInt(1, 10000);
+                            while( used_tag.get(tag_id) !=null)
+                            {
+                                tag_id =  RandomUtils.nextInt(1, 10000);
+                            }
+                            used_tag.put(tag_id,1);
                             pstm.setInt(1, corp_id);
                             pstm.setInt(2, job_id);
                             pstm.setInt(3, tag_id);
-                            pstm.setString(4, RandomValue.getTagContent());
-                            tag_id++;
                             pstm.addBatch();
                         }
                         //添加到同一个批处理中
@@ -458,8 +472,69 @@ public class App {
         }
     }
 
+    @Test
+    public void insertTags() {
 
-    @org.junit.Test
+        long begin = 1;
+        long end = begin + 1000;///每次循环插入的数据量
+        long sum = 0;
+        int tag_sum = 0;
+        //定义连接、statement对象
+        Connection conn = null;
+        PreparedStatement pstm = null;
+        int corp_id = 1;
+
+        try {
+            //加载jdbc驱动
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            //连接mysql
+            conn = DriverManager.getConnection(url, user, password);
+            //将自动提交关闭
+            // conn.setAutoCommit(false);
+            //编写sql
+            String sql = "INSERT INTO tag VALUES (?,?)";
+            //预编译sql
+            pstm = conn.prepareStatement(sql);
+            //开始总计时
+            long bTime1 = System.currentTimeMillis();
+            int tag_id=1;
+            //循环10次，每次1000数据，一共1万
+            for (int i = 0; i < 10; i++) {
+                //开始循环
+
+                long bTime = System.currentTimeMillis();
+                while (begin < end) {
+                    pstm.setInt(1,tag_id);
+                    pstm.setString(2,"tag"+tag_id);
+                    pstm.addBatch();
+                    begin++;
+                    tag_id++;
+                }
+                end += 1000;
+
+                pstm.executeBatch();
+                //关闭分段计时
+                long eTime = System.currentTimeMillis();
+                //输出
+                System.out.println("成功插入 1k 条tag数据耗时：" + (eTime - bTime));
+            }
+            //执行批处理
+//                //提交事务
+//                conn.commit();
+            //边界值自增10W
+            //关闭总计时
+            long eTime1 = System.currentTimeMillis();
+            //输出
+            System.out.println("插入 1w tag数据共耗时：" + (eTime1 - bTime1));
+        } catch (
+                SQLException e) {
+            e.printStackTrace();
+        } catch (
+                ClassNotFoundException e1) {
+            e1.printStackTrace();
+        }
+    }
+    @Test
     public void insertapply() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
@@ -548,7 +623,7 @@ public class App {
         }
     }
 
-    @org.junit.Test
+    @Test
     public void insert_applicant_to_corp() {
 
         long begin = 1;
@@ -630,7 +705,7 @@ public class App {
     }
 
 
-    @org.junit.Test
+    @Test
     public void insert_message() {
 
         long begin = 1;
@@ -652,17 +727,17 @@ public class App {
             //将自动提交关闭
             // conn.setAutoCommit(false);
             //编写sql
-            String sql = "INSERT INTO messagetocorp VALUES (?,?,?,?,?)";
+            String sql = "INSERT INTO messagetocorp VALUES (?,?,?,?,?,?)";
             //预编译sql
             pstm = conn.prepareStatement(sql);
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
             //循环10次，每次1000数据，一共1万
+            int message_id=1;
             for (int i = 0; i < 100; i++) {
                 //开始循环
 
-                int message_id = 1;
                 long bTime = System.currentTimeMillis();
                 while (begin < end) {
                     int num = RandomUtils.nextInt(0, 3);
@@ -676,20 +751,22 @@ public class App {
 
                         pstm.setInt(3, message_id);
                         message_id++;
+                        pstm.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
 
-                        pstm.setString(4, RandomValue.getMessageContent(applicant_id.toString()));
-                        pstm.setBoolean(5, true);
+                        pstm.setString(5, RandomValue.getMessageContent(applicant_id.toString()));
+                        pstm.setBoolean(6, true);
 
                         pstm.addBatch();
 
                         pstm.setString(1, applicant_id.toString());
                         pstm.setInt(2, corp_id);
+
                         pstm.setInt(3, message_id);
-
                         message_id++;
+                        pstm.setTimestamp(4, new Timestamp(System.currentTimeMillis()));
 
-                        pstm.setString(4, "你好 欢迎报名");
-                        pstm.setBoolean(5, false);
+                        pstm.setString(5, "你好 欢迎报名");
+                        pstm.setBoolean(6, false);
 
                         pstm.addBatch();
                     }
@@ -720,7 +797,7 @@ public class App {
         }
     }
 
-    @org.junit.Test
+    @Test
     public void insertcommentAndBanCommenAndTip() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
@@ -851,7 +928,7 @@ public class App {
     }
 
 
-    @org.junit.Test
+    @Test
     public void insertTipOrLike() {
         long begin = 1;
         long end = begin + 1000;///每次循环插入的数据量
@@ -976,6 +1053,7 @@ public class App {
         insertApplicantAndBanApplicant();
         insertcorpAndBanCorp();
         insertJobs();
+        insertTags();
         insertApplicantTags();
         insertJobTags();
         insert_message();
