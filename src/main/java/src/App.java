@@ -578,13 +578,17 @@ public class App {
 
             //循环10次，每次1000数据，一共10~50万
 
+            applicant_id = new BigInteger("310103199210102000");
             for (int i = 0; i < 100; i++) {
                 //开始循环
                 long bTime = System.currentTimeMillis();
                 while (begin < end) {
                     int num = RandomUtils.nextInt(0, 5);
                     sum += num;
-                    applicant_id = new BigInteger("310103199210102000");
+                    if(sum >= 99900)//十万个applicant
+                    {
+                        applicant_id = new BigInteger("310103199210102000");
+                    }
                     for (int j = 0; j < num; j++) {
                         applicant_id = applicant_id.add(new BigInteger("1"));
                         pstm.setString(1, applicant_id.toString());
@@ -595,6 +599,8 @@ public class App {
                         pstm.setBoolean(3, a);
                         pstm.setBoolean(4, !a);
                         pstm.addBatch();
+
+
                     }
                     corp_id++;
                     begin++;

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2079bf94-ec90-4bd2-a209-9c013107d21f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/App.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -64,6 +63,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicant_to_corp">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/tip_or_like_comment">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
@@ -84,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="816" column="29" lean-forward="true" selection-start-line="816" selection-start-column="29" selection-end-line="816" selection-end-column="29" />
+            <state relative-caret-position="209">
+              <caret line="589" column="76" selection-start-line="589" selection-start-column="76" selection-end-line="589" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#702#723#0" expanded="true" />
@@ -114,15 +122,6 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicanttag">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/banscorp">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -287,7 +286,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559462862316" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559463562916" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -414,7 +413,7 @@
       <option name="presentableId" value="Default" />
       <updated>1559373810723</updated>
       <workItem from="1559373813865" duration="28013000" />
-      <workItem from="1559453638116" duration="9209000" />
+      <workItem from="1559453638116" duration="9909000" />
     </task>
     <servers />
   </component>
@@ -451,7 +450,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37222000" />
+    <option name="totallyTimeSpent" value="37922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -466,7 +465,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.088809945" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.088809945" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41740674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -485,7 +484,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.1196443" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.12449475" />
+      <window_info active="true" anchor="right" id="Database" order="6" visible="true" weight="0.13904607" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -652,13 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicant_to_corp">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applyforjob">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -774,10 +766,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/applicant_to_corp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="816" column="29" lean-forward="true" selection-start-line="816" selection-start-column="29" selection-end-line="816" selection-end-column="29" />
+        <state relative-caret-position="209">
+          <caret line="589" column="76" selection-start-line="589" selection-start-column="76" selection-end-line="589" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#702#723#0" expanded="true" />
