@@ -88,7 +88,7 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入1k条数据耗时：" + "成功插入1k条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入1k Applicant 条数据耗时：" + "成功插入1k条ban Applicant数据耗时：" + (eTime - bTime));
             }
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
@@ -696,7 +696,7 @@ public class App {
                 pstm.executeBatch();
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入message" + sum + "条数据耗时：" + (eTime - bTime));
+                System.out.println(i+":"+"成功插入message" + sum + "条数据耗时：" + (eTime - bTime));
             }
 //                //提交事务
 //                conn.commit();
@@ -826,7 +826,7 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入" + sum + "条comment数据" + "耗时：" + (eTime - bTime));
+                System.out.println(i+":"+"成功插入" + sum + "条comment数据" + "耗时：" + (eTime - bTime));
             }
             long eTime1 = System.currentTimeMillis();
             //输出
@@ -947,7 +947,7 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入3k条tip or like 数据耗时：" + (eTime - bTime));
+                System.out.println(i+":"+"成功插入3k条 tip or like 数据耗时：" + (eTime - bTime));
             }
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
