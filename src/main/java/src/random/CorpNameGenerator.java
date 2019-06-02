@@ -42,7 +42,6 @@ public class CorpNameGenerator extends GenericGenerator {
             System.out.println(str + "is used.");
         }
         return str;
-
     }
 
     private static String genCity() {

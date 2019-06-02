@@ -20,6 +20,8 @@ public class App {
 
     private static Map<Integer, Integer> corp_job_num = new HashMap<Integer, Integer>();
 
+    private static Map<BigInteger, Integer> applicant_apply = new HashMap<BigInteger, Integer>();
+
 
     @org.junit.Test
     public void insertApplicantAndBanApplicant() {
@@ -51,15 +53,15 @@ public class App {
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
-            //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            //循环100次，每次1000数据，一共10万
+            for (int i = 0; i < 100; i++) {
 
                 //开启分段计时，计1W数据耗时
                 long bTime = System.currentTimeMillis();
                 //开始循环
                 while (begin < end) {
 
-                    System.out.println(id);
+                    //  System.out.println(id);
                     //赋值
                     pstm.setString(1, RandomValue.getChineseName());
                     pstm.setString(2, id.toString(10));
@@ -91,7 +93,7 @@ public class App {
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入1w数据共耗时：" + "插入1w数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入10w Applicant 共耗时：" + "插入10w ban Applicant 共耗时：" + (eTime1 - bTime1));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e1) {
@@ -130,7 +132,7 @@ public class App {
                 //开始循环
                 while (begin < end) {
 
-                    System.out.println(admin_id);
+                    //  System.out.println(admin_id);
                     //赋值
                     pstm.setInt(1, admin_id);
                     pstm.setString(2, RandomValue.getPassword(6, 10));
@@ -153,7 +155,7 @@ public class App {
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入1w数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入1w admin 数据共耗时：" + (eTime1 - bTime1));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e1) {
@@ -190,8 +192,8 @@ public class App {
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
-            //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            //循环10次，每次1000数据，一共10万
+            for (int i = 0; i < 100; i++) {
 
                 //开启分段计时，计1W数据耗时
                 long bTime = System.currentTimeMillis();
@@ -230,7 +232,7 @@ public class App {
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入1w数据共耗时：" + "插入1w数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入10w Corp共耗时：" + "插入10w ban corp 数据共耗时：" + (eTime1 - bTime1));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e1) {
@@ -262,21 +264,21 @@ public class App {
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
-            //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            //循环100次，每次1000数据，一共10万
+            for (int i = 0; i < 100; i++) {
 
                 //开启分段计时，计1W数据耗时
                 long bTime = System.currentTimeMillis();
                 //开始循环
                 while (begin < end) {
-                    System.out.println(corp_id);
+                    // System.out.println(corp_id);
                     //赋值
                     pstm.setInt(1, corp_id);
-                    int job_num = RandomUtils.nextInt(0, 10);
+                    int job_num = RandomUtils.nextInt(1, 4);
                     sum += job_num;
                     corp_job_num.put(corp_id, job_num);
                     int job_id = 1;
-                    //0到10个岗位per公司
+                    //0到3个岗位per公司
                     for (int j = 0; j < job_num; j++) {
                         pstm.setInt(2, job_id);
                         String jobName = RandomValue.getJobName();
@@ -302,12 +304,12 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入" + sum + "条job数据耗时：" + (eTime - bTime));
             }
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入" + sum + "Job 数据共耗时：" + (eTime1 - bTime1));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e1) {
@@ -342,11 +344,11 @@ public class App {
             long bTime1 = System.currentTimeMillis();
 
             //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 100; i++) {
                 //开始循环
                 long bTime = System.currentTimeMillis();
                 while (begin < end) {
-                    int tag_num = RandomUtils.nextInt(0, 10);
+                    int tag_num = RandomUtils.nextInt(0, 3);
                     sum += tag_num;
                     int tag_id = 1;
                     for (int j = 0; j < tag_num; j++) {
@@ -366,11 +368,11 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入" + sum + "条 applicanttag数据耗时：" + (eTime - bTime));
             }
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入" + sum + " applicanttag 数据共耗时：" + (eTime1 - bTime1));
         } catch (
                 SQLException e) {
             e.printStackTrace();
@@ -406,32 +408,30 @@ public class App {
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
-            //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            //循环10次，每次1000数据，一共10万
+            for (int i = 0; i < 100; i++) {
                 //开始循环
 
                 long bTime = System.currentTimeMillis();
                 while (begin < end) {
                     //开启分段计时，计1W数据耗时
-                    pstm.setInt(1, corp_id);
-
                     for (int k = 0; k < corp_job_num.get(corp_id); k++) {
                         int job_id = k + 1;
                         int tag_id = 1;
                         int tag_num = RandomUtils.nextInt(0, 3);
                         sum += tag_num;
-                        pstm.setInt(2, job_id);
                         for (int j = 0; j < tag_num; j++) {
+                            pstm.setInt(1, corp_id);
+                            pstm.setInt(2, job_id);
                             pstm.setInt(3, tag_id);
                             pstm.setString(4, RandomValue.getTagContent());
                             tag_id++;
                             pstm.addBatch();
                         }
-
-                        begin++;
                         //添加到同一个批处理中
                     }
                     corp_id++;
+                    begin++;
                 }
                 end += 1000;
 
@@ -439,7 +439,7 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入" + sum + "条jobtag数据耗时：" + (eTime - bTime));
             }
             //执行批处理
 //                //提交事务
@@ -448,7 +448,7 @@ public class App {
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入" + sum + "jobtag数据共耗时：" + (eTime1 - bTime1));
         } catch (
                 SQLException e) {
             e.printStackTrace();
@@ -488,8 +488,8 @@ public class App {
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
-            //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            //循环10次，每次1000数据，一共10万
+            for (int i = 0; i < 100; i++) {
                 //开始循环
 
                 long bTime = System.currentTimeMillis();
@@ -499,11 +499,18 @@ public class App {
                         int job_id = k + 1;
                         int apply_num = RandomUtils.nextInt(0, 5);
                         sum += apply_num;
+                        applicant_apply.clear();
                         for (int j = 0; j < apply_num; j++) {
                             applicant_id = new BigInteger("310103199210102000");
-                            int a = j*1000;
-                            int b =(j+1)*1000;
-                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(a,b) + ""));
+                            //一共10w个applicant 分成 apply_num份 就不会有primary key 重复了
+                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 100000) + ""));
+                            while (applicant_apply.get(applicant_id) != null) {
+                                System.out.println(applicant_id.toString() + "is applied");
+                                applicant_id = new BigInteger("310103199210102000");
+                                applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 100000) + ""));
+                            }
+                            applicant_apply.put(applicant_id, 1);
+
                             //随机applicant
                             pstm.setString(1, applicant_id.toString());
                             pstm.setInt(2, corp_id);
@@ -522,7 +529,7 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入" + sum + " applyforjob 条数据耗时：" + (eTime - bTime));
             }
             //执行批处理
 //                //提交事务
@@ -531,7 +538,7 @@ public class App {
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入" + sum + " applyforjob 数据共耗时：" + (eTime1 - bTime1));
         } catch (
                 SQLException e) {
             e.printStackTrace();
@@ -569,13 +576,13 @@ public class App {
             //开始总计时
             long bTime1 = System.currentTimeMillis();
 
-            //循环10次，每次1000数据，一共1万
+            //循环10次，每次1000数据，一共10~50万
 
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 100; i++) {
                 //开始循环
                 long bTime = System.currentTimeMillis();
                 while (begin < end) {
-                    int num = RandomUtils.nextInt(0, 15);
+                    int num = RandomUtils.nextInt(0, 5);
                     sum += num;
                     applicant_id = new BigInteger("310103199210102000");
                     for (int j = 0; j < num; j++) {
@@ -584,8 +591,9 @@ public class App {
 
                         //  System.out.println(applicant_id.toString());
                         pstm.setInt(2, corp_id);
-                        pstm.setBoolean(3, j % 2 == 1);
-                        pstm.setBoolean(4, j % 2 == 0);
+                        Boolean a = RandomUtils.nextInt(0, 10) % 8 == 1;
+                        pstm.setBoolean(3, a);
+                        pstm.setBoolean(4, !a);
                         pstm.addBatch();
                     }
                     corp_id++;
@@ -597,7 +605,7 @@ public class App {
                 pstm.executeBatch();
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入" + sum + "条applicant_to_corp 数据耗时：" + (eTime - bTime));
             }
 //                //提交事务
 //                conn.commit();
@@ -605,7 +613,7 @@ public class App {
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入applicant_to_corp" + sum + "数据共耗时：" + (eTime1 - bTime1));
         } catch (
                 SQLException e) {
             e.printStackTrace();
@@ -645,24 +653,38 @@ public class App {
             long bTime1 = System.currentTimeMillis();
 
             //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 100; i++) {
                 //开始循环
 
+                int message_id = 1;
                 long bTime = System.currentTimeMillis();
                 while (begin < end) {
-                    int num = RandomUtils.nextInt(0, 5);
-                    sum += num;
-                    int message_id = 1;
+                    int num = RandomUtils.nextInt(0, 3);
+                    sum += num * 2;
                     for (int j = 0; j < num; j++) {
                         applicant_id = new BigInteger("310103199210102000");
-                        applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 10000) + ""));
+                        applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 100000) + ""));
                         pstm.setString(1, applicant_id.toString());
                         //  System.out.println(applicant_id.toString());
                         pstm.setInt(2, corp_id);
                         pstm.setInt(3, message_id);
+
                         message_id++;
+
                         pstm.setString(4, RandomValue.getMessageContent(applicant_id.toString()));
                         pstm.setBoolean(5, true);
+
+                        pstm.addBatch();
+
+                        pstm.setString(1, applicant_id.toString());
+                        pstm.setInt(2, corp_id);
+                        pstm.setInt(3, message_id);
+
+                        message_id++;
+
+                        pstm.setString(4, "你好 欢迎报名");
+                        pstm.setBoolean(5, false);
+
                         pstm.addBatch();
                     }
                     corp_id++;
@@ -674,7 +696,7 @@ public class App {
                 pstm.executeBatch();
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入" + sum + "条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入message" + sum + "条数据耗时：" + (eTime - bTime));
             }
 //                //提交事务
 //                conn.commit();
@@ -682,7 +704,7 @@ public class App {
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入message" + sum + "数据共耗时：" + (eTime1 - bTime1));
         } catch (
                 SQLException e) {
             e.printStackTrace();
@@ -728,9 +750,9 @@ public class App {
             pstm_tip = conn.prepareStatement(sql3);//tip comment
             //开始总计时
             long bTime1 = System.currentTimeMillis();
-            int tip_id=1;
-            //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            int tip_id = 1;
+            //循环100次，每次1000数据，一共10万
+            for (int i = 0; i < 100; i++) {
                 int comment_id = 1;
                 //开始循环
 
@@ -739,11 +761,14 @@ public class App {
                     //开启分段计时，计1W数据耗时
                     for (int k = 0; k < corp_job_num.get(corp_id); k++) {
                         int job_id = k + 1;
-                        int apply_num = RandomUtils.nextInt(0, 5);
+                        int apply_num = RandomUtils.nextInt(0, 3);
                         sum += apply_num;
                         for (int j = 0; j < apply_num; j++) {
                             applicant_id = new BigInteger("310103199210102000");
-                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt((j + 1) * 1000, (j + 1) * 1000 * 2 - 1) + ""));
+
+                            //一共10w个applicant 分成 apply_num份 就不会有primary key 重复了
+                            int a = 10000 / 2 / apply_num;
+                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(a * j, a * j * 2) + ""));
                             //随机applicant
                             pstm.setString(1, applicant_id.toString());
                             pstm.setInt(2, corp_id);
@@ -763,18 +788,17 @@ public class App {
                             pstm2.addBatch();
 
 
-
                             pstm_tip.setInt(2, tip_id);
                             tip_id++;
 
-                            pstm_tip.setString(3,applicant_id.toString());//admin number = 5000
+                            pstm_tip.setString(3, applicant_id.toString());//admin number = 5000
 
                             pstm_tip.setInt(4, corp_id);
                             pstm_tip.setInt(5, job_id);
                             pstm_tip.setInt(6, comment_id);
-                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0,1000) + ""));
+                            applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 1000) + ""));
 
-                            pstm_tip.setString(1,applicant_id.toString());
+                            pstm_tip.setString(1, applicant_id.toString());
 
 
                             if (RandomUtils.nextInt(0, 2) == 1) {
@@ -802,11 +826,11 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入" + sum + "条comment数据" + "成功插入" + sum + "条ban comment数据" + "耗时：" + (eTime - bTime));
+                System.out.println("成功插入" + sum + "条comment数据" + "耗时：" + (eTime - bTime));
             }
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入" + sum + "数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入comment ban comment tip_or_like_comment 每个表" + sum + "条数据共耗时：" + (eTime1 - bTime1));
         } catch (
                 SQLException e) {
             e.printStackTrace();
@@ -815,7 +839,6 @@ public class App {
             e1.printStackTrace();
         }
     }
-
 
 
     @org.junit.Test
@@ -850,9 +873,9 @@ public class App {
             pstm_job = conn.prepareStatement(sql_jobs);
             //开始总计时
             long bTime1 = System.currentTimeMillis();
-
+            int corp_id = 1;
             //循环10次，每次1000数据，一共1万
-            for (int i = 0; i < 10; i++) {
+            for (int i = 0; i < 100; i++) {
 
                 //开启分段计时，计1W数据耗时
                 long bTime = System.currentTimeMillis();
@@ -863,21 +886,21 @@ public class App {
                     pstm.setInt(1, tip_id);
                     //加applicant
                     BigInteger applicant_id = new BigInteger("310103199210102000");
-                    applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 5000) + ""));
+                    applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(0, 50000) + ""));
 
                     pstm_applicant.setString(1, applicant_id.toString());
 
-                    applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(1, 2000) + ""));
+                    applicant_id = applicant_id.add(new BigInteger(RandomUtils.nextInt(1, 50000) + ""));
                     pstm_applicant.setString(3, applicant_id.toString());
 
                     pstm_applicant.setInt(2, tip_id);
                     //加job
+
                     pstm_job.setString(1, applicant_id.toString());
                     pstm_job.setInt(2, tip_id);
-                    int corp_id=1;
-                    pstm_job.setInt(3,corp_id);
+                    pstm_job.setInt(3, corp_id);
                     corp_id++;
-                    pstm_job.setInt(4,RandomUtils.nextInt(1,corp_job_num.get(corp_id)));
+                    tip_id++;
 
                     if (RandomUtils.nextInt(0, 2) == 1) {
                         pstm.setString(2, "tip");
@@ -886,26 +909,32 @@ public class App {
                         pstm_applicant.setString(4, "tip");
                         pstm_applicant.setString(5, RandomValue.getPassword(6, 10));
 
+                        //System.out.println(corp_job_num.get(corp_id));
+                        //System.out.println(corp_id);
+
+                        pstm_job.setInt(4, 1);
                         pstm_job.setString(5, "tip");
                         pstm_job.setString(6, RandomValue.getPassword(6, 10));
+                        pstm_job.addBatch();
 
                     } else {
                         pstm.setString(2, "like");
                         pstm.setString(3, null);
                         pstm_applicant.setString(4, "like");
                         pstm_applicant.setString(5, null);
+                        //System.out.println(corp_job_num.get(corp_id));
 
+                        pstm_job.setInt(4, 1);
                         pstm_job.setString(5, "like");
                         pstm_job.setString(6, null);
+                        pstm_job.addBatch();
 
 
                     }
                     //添加到同一个批处理中
                     pstm.addBatch();
                     pstm_applicant.addBatch();
-                    pstm_job.addBatch();
                     begin++;
-                    tip_id++;
                 }
                 //执行批处理
                 pstm.executeBatch();
@@ -918,12 +947,12 @@ public class App {
                 //关闭分段计时
                 long eTime = System.currentTimeMillis();
                 //输出
-                System.out.println("成功插入4k条数据耗时：" + (eTime - bTime));
+                System.out.println("成功插入3k条tip or like 数据耗时：" + (eTime - bTime));
             }
             //关闭总计时
             long eTime1 = System.currentTimeMillis();
             //输出
-            System.out.println("插入4w数据共耗时：" + (eTime1 - bTime1));
+            System.out.println("插入" + "30w tip" + "数据共耗时：" + (eTime1 - bTime1));
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e1) {
@@ -932,18 +961,17 @@ public class App {
     }
 
     @Test
-    public void insertAll()
-    {
+    public void insertAll() {
         insertadmin();
         insertApplicantAndBanApplicant();
         insertcorpAndBanCorp();
         insertJobs();
         insertApplicantTags();
         insertJobTags();
-        insertcommentAndBanCommenAndTip();
-
+        insert_message();
         insertTipOrLike();
-        insertapply() ;
+        insertcommentAndBanCommenAndTip();
+        insertapply();
         insert_applicant_to_corp();
     }
 
