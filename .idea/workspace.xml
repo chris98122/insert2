@@ -85,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
-              <caret line="676" column="46" selection-start-line="676" selection-start-column="46" selection-end-line="676" selection-end-column="46" />
+            <state relative-caret-position="94">
+              <caret line="660" column="54" selection-start-line="660" selection-start-column="54" selection-end-line="660" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -103,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="601" column="46" lean-forward="true" selection-start-line="599" selection-start-column="72" selection-end-line="601" selection-end-column="46" />
+            <state relative-caret-position="122">
+              <caret line="585" column="54" selection-start-line="585" selection-start-column="54" selection-end-line="585" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#702#723#0" expanded="true" />
@@ -196,8 +196,8 @@
         <option value="$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/JobList.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/random/TagList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/src/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/BetterApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/App.java" />
       </list>
     </option>
   </component>
@@ -293,7 +293,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559487569794" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559487899078" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -322,22 +322,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.App.insert_applicant_to_corp">
-    <configuration name="App" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="insert2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="src.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="src" />
-      <option name="MAIN_CLASS_NAME" value="src.App" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.BetterApp.insert_applicant_to_corp">
     <configuration name="App.insertAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="insert2" />
       <extension name="coverage">
@@ -386,6 +371,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BetterApp.insert_applicant_to_corp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="insert2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="src.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="src" />
+      <option name="MAIN_CLASS_NAME" value="src.BetterApp" />
+      <option name="METHOD_NAME" value="insert_applicant_to_corp" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BetterApp.insert_message" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="insert2" />
       <extension name="coverage">
@@ -404,11 +405,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BetterApp.insert_applicant_to_corp" />
         <item itemvalue="JUnit.App.insert_applicant_to_corp" />
         <item itemvalue="JUnit.App.insertAll" />
         <item itemvalue="JUnit.BetterApp.insertAll" />
         <item itemvalue="JUnit.BetterApp.insert_message" />
-        <item itemvalue="JUnit.App" />
       </list>
     </recent_temporary>
   </component>
@@ -423,20 +424,11 @@
       <option name="presentableId" value="Default" />
       <updated>1559373810723</updated>
       <workItem from="1559373813865" duration="28013000" />
-      <workItem from="1559453638116" duration="28051000" />
+      <workItem from="1559453638116" duration="28358000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BetterApp_insertAll - 2019.06.02 at 21h 04m 36s.xml">
-      <configuration name="BetterApp.insertAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BetterApp_insertAll - 2019.06.02 at 21h 10m 08s.xml">
-      <configuration name="BetterApp.insertAll" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BetterApp_insertAll - 2019.06.02 at 21h 12m 01s.xml">
-      <configuration name="BetterApp.insertAll" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BetterApp_insertAll - 2019.06.02 at 21h 17m 20s.xml">
       <configuration name="BetterApp.insertAll" configurationId="JUnit" />
     </history-entry>
@@ -458,9 +450,18 @@
     <history-entry file="App_insertAll - 2019.06.02 at 22h 56m 38s.xml">
       <configuration name="App.insertAll" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="App_insert_applicant_to_corp - 2019.06.02 at 22h 59m 37s.xml">
+      <configuration name="App.insert_applicant_to_corp" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BetterApp_insert_applicant_to_corp - 2019.06.02 at 23h 00m 27s.xml">
+      <configuration name="BetterApp.insert_applicant_to_corp" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="App_insert_applicant_to_corp - 2019.06.02 at 23h 01m 19s.xml">
+      <configuration name="App.insert_applicant_to_corp" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56064000" />
+    <option name="totallyTimeSpent" value="56371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -475,7 +476,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.103019536" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.053285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41740674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -876,21 +877,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="94">
+          <caret line="660" column="54" selection-start-line="660" selection-start-column="54" selection-end-line="660" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="601" column="46" lean-forward="true" selection-start-line="599" selection-start-column="72" selection-end-line="601" selection-end-column="46" />
+        <state relative-caret-position="122">
+          <caret line="585" column="54" selection-start-line="585" selection-start-column="54" selection-end-line="585" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#702#723#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="676" column="46" selection-start-line="676" selection-start-column="46" selection-end-line="676" selection-end-column="46" />
         </state>
       </provider>
     </entry>

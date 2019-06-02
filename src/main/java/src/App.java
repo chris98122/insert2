@@ -583,7 +583,7 @@ public class App {
                 //开始循环
                 long bTime = System.currentTimeMillis();
                 while (begin < end) {
-                    int num = RandomUtils.nextInt(0, 5);
+                    int num = RandomUtils.nextInt(0, 15);
                     sum += num;
                     tmp_sum += num;
                     if(tmp_sum >= 99900)//十万个applicant
@@ -597,7 +597,7 @@ public class App {
 
                         //  System.out.println(applicant_id.toString());
                         pstm.setInt(2, corp_id);
-                        Boolean a = RandomUtils.nextInt(0, 10) % 8 == 1;
+                        Boolean a = RandomUtils.nextInt(0, 100) % 99 == 1;
                         pstm.setBoolean(3, !a);
                         pstm.setBoolean(4, a);
                         pstm.addBatch();
