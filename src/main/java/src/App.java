@@ -599,8 +599,6 @@ public class App {
                         pstm.setBoolean(3, a);
                         pstm.setBoolean(4, !a);
                         pstm.addBatch();
-
-
                     }
                     corp_id++;
                     begin++;
