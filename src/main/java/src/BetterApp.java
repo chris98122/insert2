@@ -824,7 +824,7 @@ public class BetterApp {
             //编写sql
             String sql = "INSERT INTO comments VALUES (?,?,?,?,?)";
 
-            String sql2 = "INSERT INTO banscomment VALUES (?,?,?,?,?,?)";
+            String sql2 = "INSERT INTO banscomment VALUES (?,?,?,?,?)";
 
             String sql3 = "INSERT INTO tip_or_like_comment VALUES (?,?,?,?,?,?,?,?)";
             //预编译sql
@@ -866,7 +866,6 @@ public class BetterApp {
                             pstm2.setInt(3, corp_id);
                             pstm2.setInt(4, job_id);
                             pstm2.setInt(5, comment_id);
-                            pstm2.setBoolean(6, j % 4 == 1);
 
                             pstm2.addBatch();
                             if(tip_id<100000)//tip or like 父表只有十万所以子表只写十万
