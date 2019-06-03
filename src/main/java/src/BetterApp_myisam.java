@@ -9,8 +9,8 @@ import java.sql.*;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BetterApp {
-    private String url = "jdbc:mysql://localhost:3306/betterhireapp?useServerPrepStmts=false&rewriteBatchedStatements=true&useUnicode=true&amp&serverTimezone=GMT";
+public class BetterApp_myisam {
+    private String url = "jdbc:mysql://localhost:3306/myisamhireapp?useServerPrepStmts=false&rewriteBatchedStatements=true&useUnicode=true&amp&serverTimezone=GMT";
     private String user = "root";
     private String password = "root";
 
