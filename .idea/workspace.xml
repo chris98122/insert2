@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2079bf94-ec90-4bd2-a209-9c013107d21f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/src/BetterApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/src/BetterApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/src/BetterApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/src/BetterApp.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,11 +74,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp_myisam.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="1059" column="39" lean-forward="true" selection-start-line="1059" selection-start-column="39" selection-end-line="1059" selection-end-column="39" />
+            <state relative-caret-position="339">
+              <caret line="1052" column="20" selection-start-line="1052" selection-start-column="20" selection-end-line="1052" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/TestThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="240" lean-forward="true" selection-start-line="240" selection-end-line="240" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,16 +96,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp_myisam.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="1060" column="22" lean-forward="true" selection-start-line="1060" selection-start-column="22" selection-end-line="1060" selection-end-column="22" />
+            <state relative-caret-position="-68">
+              <caret line="659" column="37" lean-forward="true" selection-start-line="659" selection-start-column="37" selection-end-line="659" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/banscomment">
+        <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/applicant_tag">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -109,16 +117,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/applyforjob">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/applicantuser">
+        <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/corp">
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
@@ -152,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/SqlGenerate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
+            <state relative-caret-position="361">
               <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -164,8 +163,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-107">
-              <caret line="320" column="39" selection-start-line="320" selection-start-column="39" selection-end-line="320" selection-end-column="39" />
+            <state relative-caret-position="361">
+              <caret line="100" column="9" lean-forward="true" selection-start-line="98" selection-start-column="7" selection-end-line="100" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,6 +229,9 @@
         <option value="$PROJECT_DIR$/src/main/java/src/SqlGenerate.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/BetterApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/src/BetterApp_myisam.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/MultiThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/ThreadDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/src/TestThread.java" />
       </list>
     </option>
   </component>
@@ -255,9 +257,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="216" />
-    <option name="y" value="24" />
-    <option name="width" value="480" />
+    <option name="y" value="510" />
+    <option name="width" value="642" />
     <option name="height" value="510" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -308,6 +309,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="random" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="insert2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="insert2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="TestThread.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -320,7 +330,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559560191585" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559574648615" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -349,8 +359,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.BetterApp.insertAll">
-    <configuration name="App.insert_applicant_to_corp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.TestThread">
+    <configuration name="TestThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="src.TestThread" />
       <module name="insert2" />
       <extension name="coverage">
         <pattern>
@@ -358,10 +369,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="src" />
-      <option name="MAIN_CLASS_NAME" value="src.App" />
-      <option name="METHOD_NAME" value="insert_applicant_to_corp" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -432,11 +439,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BetterApp.insertAll" />
+        <item itemvalue="Application.TestThread" />
         <item itemvalue="JUnit.BetterApp_myisam.insertAll" />
+        <item itemvalue="JUnit.BetterApp.insertAll" />
         <item itemvalue="JUnit.BetterApp.insertapply" />
         <item itemvalue="JUnit.BetterApp.insert_applicant_to_corp" />
-        <item itemvalue="JUnit.App.insert_applicant_to_corp" />
       </list>
     </recent_temporary>
   </component>
@@ -457,23 +464,13 @@
       <workItem from="1559541181634" duration="425000" />
       <workItem from="1559542702127" duration="179000" />
       <workItem from="1559548219515" duration="245000" />
-      <workItem from="1559553644777" duration="5113000" />
+      <workItem from="1559553644777" duration="6007000" />
+      <workItem from="1559566644926" duration="3158000" />
+      <workItem from="1559570800141" duration="3686000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BetterApp_insert_applicant_to_corp - 2019.06.02 at 23h 05m 50s.xml">
-      <configuration name="BetterApp.insert_applicant_to_corp" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="App_insert_applicant_to_corp - 2019.06.03 at 13h 54m 37s.xml">
-      <configuration name="App.insert_applicant_to_corp" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="App_insert_applicant_to_corp - 2019.06.03 at 14h 00m 02s.xml">
-      <configuration name="App.insert_applicant_to_corp" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="BetterApp_insert_applicant_to_corp - 2019.06.03 at 14h 20m 06s.xml">
-      <configuration name="BetterApp.insert_applicant_to_corp" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BetterApp_insertapply - 2019.06.03 at 17h 21m 26s.xml">
       <configuration name="BetterApp.insertapply" configurationId="JUnit" />
     </history-entry>
@@ -492,12 +489,25 @@
     <history-entry file="BetterApp_insertAll - 2019.06.03 at 18h 49m 01s.xml">
       <configuration name="BetterApp.insertAll" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BetterApp_insertAll - 2019.06.03 at 19h 17m 32s.xml">
+      <configuration name="BetterApp.insertAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BetterApp_myisam_insertAll - 2019.06.03 at 19h 19m 07s.xml">
+      <configuration name="BetterApp_myisam.insertAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BetterApp_myisam_insertAll - 2019.06.03 at 21h 59m 18s.xml">
+      <configuration name="BetterApp_myisam.insertAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="BetterApp_myisam_insertAll - 2019.06.03 at 22h 01m 14s.xml">
+      <configuration name="BetterApp_myisam.insertAll" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67174000" />
+    <option name="totallyTimeSpent" value="74912000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2611156" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -508,7 +518,7 @@
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.05319149" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.678508" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.053285968" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.41740674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -527,7 +537,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.1196443" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.28455943" />
+      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.11560226" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
     </layout>
@@ -536,72 +546,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/CommentList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="42" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/CorpList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="62" selection-start-line="5" selection-start-column="23" selection-end-line="6" selection-end-column="62" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/CorpNameGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="37" column="41" lean-forward="true" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="29" column="39" lean-forward="true" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/random/JobList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="513" column="30" selection-start-line="513" selection-start-column="30" selection-end-line="513" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/tip_or_like_applicant">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/banscorp">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://6f567af5-7457-47ed-9263-c2eaf185b609/schema/hireapp/table/tip_or_like">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -847,36 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-107">
-          <caret line="320" column="39" selection-start-line="320" selection-start-column="39" selection-end-line="320" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d337b583-415a-4af7-a3cd-c255b8168ad4/schema/betterhireapp/table/banscomment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/SqlGenerate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/58c7ff64-ca8c-4e47-89e2-6f4fa084c258/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/banscomment">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -898,10 +812,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp_myisam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="1060" column="22" lean-forward="true" selection-start-line="1060" selection-start-column="22" selection-end-line="1060" selection-end-column="22" />
+    <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/job_tag">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/jobs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/applicant_tag">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://58c7ff64-ca8c-4e47-89e2-6f4fa084c258/schema/myisamhireapp/table/corp">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -912,10 +847,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/58c7ff64-ca8c-4e47-89e2-6f4fa084c258/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://d337b583-415a-4af7-a3cd-c255b8168ad4/schema/betterhireapp/table/banscomment">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/MultiThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/ThreadDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp_myisam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="1052" column="20" selection-start-line="1052" selection-start-column="20" selection-end-line="1052" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/SqlGenerate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/src/BetterApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="1059" column="39" lean-forward="true" selection-start-line="1059" selection-start-column="39" selection-end-line="1059" selection-end-column="39" />
+        <state relative-caret-position="-68">
+          <caret line="659" column="37" lean-forward="true" selection-start-line="659" selection-start-column="37" selection-end-line="659" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="100" column="9" lean-forward="true" selection-start-line="98" selection-start-column="7" selection-end-line="100" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/src/TestThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="240" lean-forward="true" selection-start-line="240" selection-end-line="240" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
