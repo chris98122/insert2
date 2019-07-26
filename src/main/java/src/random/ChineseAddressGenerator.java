@@ -16,7 +16,7 @@ public class ChineseAddressGenerator extends GenericGenerator {
 
     @Override
     public String generate() {
-        StringBuilder result = new StringBuilder(genProvinceAndCity());
+        StringBuilder result = new StringBuilder( );
         result.append(ChineseCharUtils.genRandomLengthChineseChars(2, 3) + "路");
         result.append(RandomUtils.nextInt(1, 8000) + "号");
         return result.toString();

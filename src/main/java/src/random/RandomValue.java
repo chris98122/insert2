@@ -4,6 +4,8 @@ import org.apache.commons.lang3.RandomUtils;
 
 import java.util.Date;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Calendar;
 
 public class RandomValue {
@@ -41,6 +43,18 @@ public class RandomValue {
 
     public static String name_sex = "";
 
+    private static List<String> education= new ArrayList();
+
+
+    static {
+        education.add("初中毕业及以下");
+        education.add("中专毕业");
+        education.add("高中毕业");
+        education.add("大专毕业");
+        education.add("本科毕业");
+        education.add("研究生毕业及以上");
+
+    }
     /**
      * 返回中文姓名
      *
@@ -92,12 +106,16 @@ public class RandomValue {
 
     }
 
+    public static String getShopName() {
+        return CorpNameGenerator.genName().substring(0,5);
+    }
+
     public static String getCorpType() {
         return CorpNameGenerator.genType();
     }
 
     public static int getSalary() {
-        return RandomUtils.nextInt(40, 200) * 100;
+        return RandomUtils.nextInt(40, 200)  ;
     }
 
     public static java.sql.Date getStartTime() {
@@ -138,5 +156,8 @@ public class RandomValue {
     {
         return CommentList.commentList.get(RandomUtils.nextInt(0, CommentList.commentList.size()-1));
     }
-
+    public static String getEducation()
+    {
+        return education.get(RandomUtils.nextInt(0, education.size()-1));
+    }
 }
